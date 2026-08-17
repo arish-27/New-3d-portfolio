@@ -100,7 +100,17 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section relative">
+            <!-- Floating Java Code Snippet 1 (Top Right) -->
+            <div class="floating-code-chip float-code-1 top-28 right-8 lg:right-16 hidden lg:block">
+                <div><span class="kw-annotation">@SpringBootApplication</span></div>
+                <div><span class="kw-type">public class</span> <span class="text-white font-bold">PortfolioApp</span> {</div>
+                <div class="pl-3"><span class="kw-type">public static void</span> <span class="kw-func">main</span>(<span class="kw-type">String</span>[] args) {</div>
+                <div class="pl-6"><span class="text-white">SpringApplication</span>.<span class="kw-func">run</span>(PortfolioApp.<span class="kw-type">class</span>);</div>
+                <div class="pl-3">}</div>
+                <div>}</div>
+            </div>
+
             <div class="hero-top-text flex items-center gap-3">
                 <span
                     class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-black/85 text-[#9ae600] border border-[#9ae600]/40 backdrop-blur-md shadow-xl">
@@ -158,7 +168,13 @@
                 </div>
 
                 <!-- Right Tech Stats Floating Card with Terminal Window Dots -->
-                <div class="hero-right">
+                <div class="hero-right relative">
+                    <!-- Floating Java Code Chip 2 -->
+                    <div class="floating-code-chip float-code-2 -top-12 -left-8 hidden md:block">
+                        <span class="kw-annotation">@RestController</span>
+                        <span class="kw-annotation">@RequestMapping</span>(<span class="kw-string">"/api/v2"</span>)
+                    </div>
+
                     <div class="glass-card stats-card animate-float-slow">
                         <div class="terminal-bar">
                             <span class="terminal-dot red"></span>
@@ -248,7 +264,16 @@
             </section>
 
             <!-- About Developer Section -->
-            <section id="about" class="about-section max-w-7xl mx-auto px-6 py-24">
+            <section id="about" class="about-section max-w-7xl mx-auto px-6 py-24 relative">
+                <!-- Floating Java Code Chip in About -->
+                <div class="floating-code-chip float-code-3 top-8 right-12 hidden lg:block">
+                    <div><span class="kw-comment">// Java 17 Stream Pipeline</span></div>
+                    <div><span class="kw-type">List</span>&lt;<span class="kw-type">Response</span>&gt; out = list.<span class="kw-func">stream</span>()</div>
+                    <div class="pl-4">.<span class="kw-func">filter</span>(Objects::nonNull)</div>
+                    <div class="pl-4">.<span class="kw-func">map</span>(Service::transform)</div>
+                    <div class="pl-4">.<span class="kw-func">toList</span>();</div>
+                </div>
+
                 <div class="glass-panel p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row justify-between gap-12">
                     <div class="about-left lg:w-1/3">
                         <div class="section-badge-pill mb-4">
@@ -304,7 +329,16 @@
             </section>
 
             <!-- Comprehensive Tech Stack Grid Section -->
-            <section id="skills" class="skills-section max-w-7xl mx-auto px-6 py-20">
+            <section id="skills" class="skills-section max-w-7xl mx-auto px-6 py-20 relative">
+                <!-- Floating Java Code in Skills -->
+                <div class="floating-code-chip float-code-4 top-4 right-12 hidden lg:block">
+                    <div><span class="kw-annotation">@Autowired</span></div>
+                    <div><span class="kw-type">private</span> <span class="text-white font-semibold">UserService</span> userService;</div>
+                </div>
+                <div class="floating-code-chip float-code-1 bottom-4 left-10 hidden lg:block">
+                    <div><span class="kw-type">public record</span> <span class="text-white font-semibold">AuthResponse</span>(<span class="kw-type">String</span> token, <span class="kw-type">Long</span> id) {}</div>
+                </div>
+
                 <div class="glass-panel p-8 sm:p-10 text-center max-w-4xl mx-auto mb-12">
                     <div class="section-badge-pill mb-4 inline-flex">
                         <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Skills —</span>
@@ -408,7 +442,13 @@
             </section>
 
             <!-- Projects Showcase Section -->
-            <section id="projects" class="projects-section max-w-7xl mx-auto px-6 py-20">
+            <section id="projects" class="projects-section max-w-7xl mx-auto px-6 py-20 relative">
+                <!-- Floating Java Code in Projects -->
+                <div class="floating-code-chip float-code-2 top-4 right-12 hidden lg:block">
+                    <div><span class="kw-annotation">@Transactional</span></div>
+                    <div><span class="kw-type">public</span> <span class="kw-type">ResponseEntity</span>&lt;<span class="text-white">Project</span>&gt; <span class="kw-func">deploy</span>() {}</div>
+                </div>
+
                 <div class="projects-header glass-panel p-8 sm:p-10 flex flex-col md:flex-row md:items-end justify-between mb-12">
                     <div>
                         <div class="section-badge-pill mb-4 inline-flex">
