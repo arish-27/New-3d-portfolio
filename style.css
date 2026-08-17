@@ -423,7 +423,7 @@ canvas {
     padding-top: 60px;
 }
 
-/* Marquee Section with Gap & Left-to-Right Scrolling */
+/* Marquee Section with Gap & Dual Direction Scrolling */
 .marquee-wrapper {
     display: flex;
     flex-direction: column;
@@ -434,7 +434,7 @@ canvas {
 }
 
 .marquee-section {
-    padding: 20px 0;
+    padding: 22px 0;
     overflow: hidden;
     white-space: nowrap;
     border-top: 1px solid rgba(154, 230, 0, 0.25);
@@ -446,7 +446,6 @@ canvas {
 
 .marquee-content {
     display: inline-block;
-    animation: marqueeReverse 28s linear infinite;
     font-family: 'Syne', sans-serif;
     font-weight: 700;
 }
@@ -456,16 +455,30 @@ canvas {
 }
 
 .marquee-content.ltr {
-    animation: marqueeReverse 30s linear infinite;
+    animation: marqueeLTR 28s linear infinite;
 }
 
-@keyframes marqueeReverse {
+.marquee-content.rtl {
+    animation: marqueeRTL 28s linear infinite;
+}
+
+@keyframes marqueeLTR {
     0% {
         transform: translateX(-50%);
     }
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes marqueeRTL {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
 
