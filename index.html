@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arish S | Full Stack Developer (Java • Python • React • SQL)</title>
+
+    <!-- Google Fonts: Syne (Display/Headings), Outfit (Body/Subtitles), Caveat (Script Accent), Fira Code (Monospace) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-lime': '#9ae600',
+                        'accent-hover': '#b4fa00',
+                        'dark-bg': '#080a0e',
+                        'card-bg': 'rgba(14, 18, 24, 0.85)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Syne', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        script: ['Caveat', 'cursive'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    animation: {
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.6', filter: 'drop-shadow(0 0 15px rgba(154, 230, 0, 0.4))' },
+                            '50%': { opacity: '1', filter: 'drop-shadow(0 0 25px rgba(154, 230, 0, 0.8))' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Devicon Icons for Java, Python, React, JS, SQL, Git, Docker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-[#080a0e] text-white font-sans overflow-x-hidden antialiased selection:bg-[#9ae600] selection:text-black">
+    <!-- Background Canvas for Scroll Animation -->
+    <canvas id="hero-lightpass"></canvas>
+
+    <!-- Cinematic Ambient Layer for Enhanced Contrast & 3D Depth -->
+    <div class="canvas-ambient-overlay"></div>
+
+    <!-- Custom Developer Cursor: </> with Click Blinking -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div id="cursor-badge" class="cursor-badge">
+            &lt;/&gt;
+        </div>
+    </div>
+    <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
+    <!-- Main Content Overlay -->
+    <div class="content-overlay relative z-10 w-full">
+
+        <!-- Glassmorphic Header -->
+        <header class="glass-header">
+            <div class="logo font-heading text-xl font-extrabold tracking-wider flex items-center gap-2">
+                <span class="text-[#9ae600] font-mono text-base">&lt;/&gt;</span>
+                <span class="text-white tracking-widest">ARISH<span class="text-[#9ae600]">.DEV</span></span>
+            </div>
+            <nav class="nav-links hidden md:flex items-center space-x-7 font-sans font-medium text-sm">
+                <a href="#about" class="text-gray-300 transition-colors hover:text-[#9ae600]">About</a>
+                <a href="#skills" class="text-gray-300 transition-colors hover:text-[#9ae600]">Tech Stack</a>
+                <a href="#projects" class="text-gray-300 transition-colors hover:text-[#9ae600]">Projects</a>
+                <a href="#testimonials" class="text-gray-300 transition-colors hover:text-[#9ae600]">Reviews</a>
+                <a href="#contact" class="text-gray-300 transition-colors hover:text-[#9ae600]">Contact</a>
+            </nav>
+            <a href="#contact" class="btn-primary cta-btn flex items-center gap-1.5">
+                <span>Hire Full Stack</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-top-text flex items-center gap-3">
+                <span
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-black/85 text-[#9ae600] border border-[#9ae600]/40 backdrop-blur-md shadow-xl">
+                    <span class="text-xs text-[#9ae600] font-bold">root@arish:~#</span>
+                    <span class="text-gray-300">status --live</span>
+                    <span class="w-2 h-2 rounded-full bg-[#9ae600] animate-ping ml-1"></span>
+                </span>
+            </div>
+
+            <div class="hero-bottom-content">
+                <!-- Left Details with Unified Name & Clear Face Margin -->
+                <div class="hero-left">
+                    <!-- Script Accent Motif -->
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="font-script text-[#9ae600] text-3xl sm:text-4xl font-bold -rotate-6 inline-block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">My</span>
+                        <span class="text-xs font-mono tracking-widest text-gray-300 uppercase">&lt;PORTFOLIO_SRC /&gt;</span>
+                    </div>
+
+                    <h1 class="hero-name-title font-heading text-4xl sm:text-5xl font-extrabold text-white tracking-tight uppercase leading-none mb-3">
+                        ARISH <span class="text-[#9ae600]">S.</span>
+                    </h1>
+
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/70 border border-[#9ae600]/40 backdrop-blur-md mb-3.5">
+                        <span class="text-[#9ae600] font-mono text-xs font-bold">&gt;_</span>
+                        <span class="font-mono text-xs font-bold tracking-wider text-gray-100 uppercase">
+                            FULL STACK DEVELOPER
+                        </span>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#9ae600]/20 text-[#9ae600]">v2.4</span>
+                    </div>
+
+                    <h2 class="text-lg sm:text-xl font-heading font-bold leading-snug mb-3 text-white">
+                        Building High-Performance Backends<br>&amp; Dynamic React Web Apps
+                    </h2>
+                    <p class="text-gray-300 text-xs sm:text-sm mb-5 font-light max-w-sm hero-desc leading-relaxed">
+                        Specialized in <strong class="text-white font-medium">Java, Python, &amp; MySQL</strong> robust
+                        backend architectures combined with modern <strong class="text-[#9ae600] font-medium">React, JavaScript, and
+                            Tailwind CSS</strong> frontends.
+                    </p>
+                    <div class="action-buttons flex flex-wrap gap-3">
+                        <a href="#projects" class="btn-primary flex items-center gap-2 text-xs sm:text-sm">
+                            <span>&lt;View Projects /&gt;</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn-secondary flex items-center gap-2 text-xs sm:text-sm">
+                            <span>&gt;_ Let's Talk</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Tech Stats Floating Card with Terminal Window Dots -->
+                <div class="hero-right">
+                    <div class="glass-card stats-card animate-float-slow">
+                        <div class="terminal-bar">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="text-[11px] font-mono text-gray-400 ml-2">zsh — dev_stack</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-mono text-gray-300 flex items-center gap-1.5 font-semibold">
+                                <svg class="w-3.5 h-3.5 text-[#9ae600]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                                CORE TECH STACK
+                            </span>
+                            <span
+                                class="text-xs px-2.5 py-0.5 rounded-full bg-[#9ae600]/20 text-[#9ae600] font-mono font-bold border border-[#9ae600]/40">v2.0</span>
+                        </div>
+                        <!-- Tech Icons Showcase -->
+                        <div class="grid grid-cols-4 gap-2.5 mb-4 text-center">
+                            <div class="p-2.5 rounded-xl bg-black/50 border border-white/10 hover:border-[#9ae600] transition-colors"
+                                title="Java">
+                                <i class="devicon-java-plain text-2xl text-orange-400"></i>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-black/50 border border-white/10 hover:border-[#9ae600] transition-colors"
+                                title="Python">
+                                <i class="devicon-python-plain text-2xl text-yellow-400"></i>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-black/50 border border-white/10 hover:border-[#9ae600] transition-colors"
+                                title="React">
+                                <i class="devicon-react-original text-2xl text-cyan-400"></i>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-black/50 border border-white/10 hover:border-[#9ae600] transition-colors"
+                                title="SQL / MySQL">
+                                <i class="devicon-mysql-plain text-2xl text-blue-400"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-300 mb-3.5 leading-relaxed font-mono">
+                            <strong class="text-white">&gt; architecture:</strong> REST APIs, Microservices &amp; SPAs.
+                        </p>
+                        <div class="badges flex flex-wrap gap-1.5">
+                            <span class="badge">&lt;clean_code/&gt;</span>
+                            <span class="badge">99.9%_uptime</span>
+                            <span class="badge">mysql_opt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lower Content with Translucent / Visible 3D Canvas Background -->
+        <div class="solid-background-container">
+
+            <!-- Tech Marquee Section -->
+            <section class="marquee-section">
+                <div
+                    class="marquee-content font-heading text-2xl sm:text-3xl tracking-wider text-gray-200 flex items-center uppercase">
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-java-plain text-2xl text-orange-400"></i> JAVA (SPRING BOOT)
+                    </span>
+                    <span class="text-[#9ae600] mx-4 font-bold">•</span>
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-python-plain text-2xl text-yellow-400"></i> PYTHON (FASTAPI / DJANGO)
+                    </span>
+                    <span class="text-[#9ae600] mx-4 font-bold">•</span>
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-react-original text-2xl text-cyan-400"></i> REACT.JS
+                    </span>
+                    <span class="text-[#9ae600] mx-4 font-bold">•</span>
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-javascript-plain text-2xl text-yellow-400"></i> JAVASCRIPT (ES6+)
+                    </span>
+                    <span class="text-[#9ae600] mx-4 font-bold">•</span>
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-mysql-plain text-2xl text-blue-400"></i> SQL &amp; MYSQL
+                    </span>
+                    <span class="text-[#9ae600] mx-4 font-bold">•</span>
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-tailwindcss-plain text-2xl text-cyan-300"></i> TAILWIND CSS
+                    </span>
+                    <span class="text-[#9ae600] mx-4 font-bold">•</span>
+                    <span class="flex items-center gap-3">
+                        <i class="devicon-docker-plain text-2xl text-blue-400"></i> DOCKER &amp; GIT
+                    </span>
+                </div>
+            </section>
+
+            <!-- About Developer Section -->
+            <section id="about" class="about-section max-w-7xl mx-auto px-6 py-24">
+                <div class="glass-panel p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row justify-between gap-12">
+                    <div class="about-left lg:w-1/3">
+                        <div class="section-badge-pill mb-4">
+                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">About —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Full Stack Engineer</span>
+                        </div>
+                        <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white leading-tight">
+                            Bridging Complex Backend Systems With Fluid Frontend Experiences
+                        </h3>
+                    </div>
+                    <div class="about-right lg:w-2/3 max-w-2xl">
+                        <p class="about-text text-xl sm:text-2xl text-gray-200 font-light leading-relaxed mb-6">
+                            Hey there, I'm <strong class="text-white font-medium">Arish S</strong> — a full stack developer
+                            driven by creating resilient software. I build enterprise-grade backends using <strong
+                                class="text-orange-400 font-medium">Java &amp; Python</strong>, coupled with optimized
+                            <strong class="text-blue-400 font-medium">SQL databases</strong> and dynamic, high-performance
+                            <strong class="text-[#9ae600] font-medium">React &amp; JavaScript</strong> user interfaces.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
+                                <h4 class="text-xl sm:text-2xl font-mono font-bold text-[#9ae600]">100%</h4>
+                                <p class="text-xs text-gray-400 mt-1 font-sans">Responsive &amp; Mobile-First</p>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
+                                <h4 class="text-lg sm:text-xl font-mono font-bold text-[#9ae600]">SQL / NoSQL</h4>
+                                <p class="text-xs text-gray-400 mt-1 font-sans">Optimized Queries &amp; Schema</p>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
+                                <h4 class="text-lg sm:text-xl font-mono font-bold text-[#9ae600]">REST &amp; JWT</h4>
+                                <p class="text-xs text-gray-400 mt-1 font-sans">Secure Auth &amp; Cloud APIs</p>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons flex gap-4">
+                            <a href="#contact" class="btn-primary flex items-center gap-2">
+                                <span>Hire For Your Team</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <a href="#skills" class="btn-secondary flex items-center gap-2">
+                                <span>Explore Skills</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comprehensive Tech Stack Grid Section -->
+            <section id="skills" class="skills-section max-w-7xl mx-auto px-6 py-20">
+                <div class="glass-panel p-8 sm:p-10 text-center max-w-4xl mx-auto mb-12">
+                    <div class="section-badge-pill mb-4 inline-flex">
+                        <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Skills —</span>
+                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Technical Proficiency</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Mastered Tech Stack &amp; Tools</h2>
+                    <p class="text-gray-300 text-sm mt-3 font-sans max-w-xl mx-auto">From database design to frontend animations, here are the
+                        technologies I leverage daily.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Backend Card -->
+                    <div
+                        class="p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-white/12 hover:border-[#9ae600]/60 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-2xl">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-orange-500/15 flex items-center justify-center mb-6 border border-orange-500/30 text-orange-400">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-white">Backend Development</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">Developing scalable microservices,
+                            authentication systems, and performant RESTful APIs.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-java-plain text-orange-400"></i> Java (Core &amp; OOP)</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-spring-plain text-green-400"></i> Spring Boot</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-python-plain text-yellow-400"></i> Python</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-fastapi-plain text-teal-400"></i> FastAPI / Django</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Card -->
+                    <div
+                        class="p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-white/12 hover:border-[#9ae600]/60 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-2xl">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-cyan-500/15 flex items-center justify-center mb-6 border border-cyan-500/30 text-cyan-400">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-white">Frontend Engineering</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">Crafting responsive, animated, and
+                            state-driven web interfaces with modern frameworks.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-react-original text-cyan-400"></i> React.js</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-javascript-plain text-yellow-400"></i> JavaScript (ES6+)</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-tailwindcss-plain text-cyan-300"></i> Tailwind CSS</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-html5-plain text-orange-500"></i> HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Database & DevOps Card -->
+                    <div
+                        class="p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-white/12 hover:border-[#9ae600]/60 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-2xl">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-500/15 flex items-center justify-center mb-6 border border-blue-500/30 text-blue-400">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-3 text-white">Database &amp; Tools</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">Database modeling, complex SQL queries,
+                            index optimization, version control, and CI/CD.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-mysql-plain text-blue-400"></i> MySQL Database</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-sqldeveloper-plain text-cyan-400"></i> SQL Queries</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-git-plain text-red-400"></i> Git &amp; GitHub</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/5 border border-white/10 text-gray-200"><i
+                                    class="devicon-docker-plain text-blue-300"></i> Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Showcase Section -->
+            <section id="projects" class="projects-section max-w-7xl mx-auto px-6 py-20">
+                <div class="projects-header glass-panel p-8 sm:p-10 flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <div class="section-badge-pill mb-4 inline-flex">
+                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Featured —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Selected Applications</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Production-Grade Software Projects
+                        </h2>
+                    </div>
+                    <p class="text-gray-300 text-sm max-w-sm mt-4 md:mt-0 font-sans">
+                        Real-world full stack applications with clean architecture, robust APIs, and interactive UIs.
+                    </p>
+                </div>
+
+                <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Project 1: Java & Spring Boot Enterprise -->
+                    <div class="project-card group glass-panel p-6 sm:p-8">
+                        <div
+                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
+                                    Java • Spring Boot • SQL
+                                </span>
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                            <div class="my-auto text-center font-mono">
+                                <i class="devicon-java-plain text-5xl text-orange-400 block mb-2"></i>
+                                <p class="text-lg text-gray-200 font-semibold font-display">Enterprise Cloud API &amp;
+                                    Microservices</p>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#9ae600]"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                    </svg> 99.9% Uptime</span>
+                                <span>•</span>
+                                <span>RESTful Architecture</span>
+                            </div>
+                        </div>
+                        <div class="project-info mt-6">
+                            <h3
+                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                Enterprise Banking &amp; Transaction Engine
+                            </h3>
+                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
+                                Scalable financial transaction backend built with Java and Spring Boot. Integrated with
+                                MySQL for ACID-compliant ledger records, JWT security, and Dockerized deployment.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tag">Java 17</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Python AI & FastAPI Dashboard -->
+                    <div class="project-card group glass-panel p-6 sm:p-8">
+                        <div
+                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold">
+                                    Python • React • FastAPI
+                                </span>
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                            <div class="my-auto text-center font-mono">
+                                <i class="devicon-python-plain text-5xl text-yellow-400 block mb-2"></i>
+                                <p class="text-lg text-gray-200 font-semibold font-display">Real-Time Data Analytics Engine
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-cyan-400"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                    </svg> Asynchronous I/O</span>
+                                <span>•</span>
+                                <span>WebSocket Stream</span>
+                            </div>
+                        </div>
+                        <div class="project-info mt-6">
+                            <h3
+                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                Intelligent Predictive Analytics Platform
+                            </h3>
+                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
+                                High-speed asynchronous Python backend using FastAPI and Pandas. Delivers live data
+                                telemetry to an interactive React dashboard styled with Tailwind CSS charts.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tag">Python</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">React.js</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Modern React SaaS Platform -->
+                    <div class="project-card group glass-panel p-6 sm:p-8">
+                        <div
+                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
+                                    React • JavaScript • SQL
+                                </span>
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                            <div class="my-auto text-center font-mono">
+                                <i class="devicon-react-original text-5xl text-cyan-400 block mb-2"></i>
+                                <p class="text-lg text-gray-200 font-semibold font-display">Full Stack E-Commerce &amp;
+                                    SaaS</p>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#9ae600]"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                    </svg> Stripe Payments</span>
+                                <span>•</span>
+                                <span>Optimistic UI</span>
+                            </div>
+                        </div>
+                        <div class="project-info mt-6">
+                            <h3
+                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                Next-Gen E-Commerce &amp; Inventory Hub
+                            </h3>
+                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
+                                Full-featured web platform with React state management, smooth micro-animations,
+                                relational SQL database architecture, and automated order fulfillment pipeline.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tag">React</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL Database</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: High Performance SQL & Database Management -->
+                    <div class="project-card group glass-panel p-6 sm:p-8">
+                        <div
+                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-mono bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold">
+                                    Java • SQL • React
+                                </span>
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                            <div class="my-auto text-center font-mono">
+                                <i class="devicon-mysql-plain text-5xl text-blue-400 block mb-2"></i>
+                                <p class="text-lg text-gray-200 font-semibold font-display">Relational Database
+                                    Optimization Tool</p>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#9ae600]"
+                                        fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                    </svg> Index Tuner</span>
+                                <span>•</span>
+                                <span>Query Profiler</span>
+                            </div>
+                        </div>
+                        <div class="project-info mt-6">
+                            <h3
+                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                SQL Query Profiler &amp; Schema Inspector
+                            </h3>
+                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
+                                Developer tool engineered to analyze complex SQL queries, index performance, and
+                                transaction locks with a responsive visual breakdown in React.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tag">MySQL / SQL</span>
+                                <span class="tag">Java Core</span>
+                                <span class="tag">React</span>
+                                <span class="tag">HTML5 / CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="testimonials-section max-w-7xl mx-auto px-6 py-20">
+                <div class="testimonials-header glass-panel p-8 sm:p-10 text-center max-w-4xl mx-auto mb-12">
+                    <div class="section-badge-pill mb-4 inline-flex">
+                        <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Feedback —</span>
+                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Peer &amp; Client Reviews</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Engineering Endorsements</h2>
+                    <p class="text-gray-300 text-sm mt-3 font-sans max-w-xl mx-auto">What engineering leaders, CTOs, and team leads say about
+                        collaborating with me.</p>
+                </div>
+
+                <div class="testimonials-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="testimonial-card p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-white/12 backdrop-blur-2xl flex flex-col justify-between hover:border-[#9ae600]/40 transition-all duration-300 shadow-2xl">
+                        <div>
+                            <div class="rating flex items-center gap-1 text-[#9ae600] text-sm mb-4">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
+                                "Arish architected our Java Spring Boot backend and connected it seamlessly to a
+                                responsive React frontend. His deep grasp of SQL query optimization reduced our API
+                                latency by 60%."
+                            </p>
+                        </div>
+                        <div class="client-meta flex items-center gap-4 pt-4 border-t border-white/10">
+                            <div
+                                class="w-11 h-11 rounded-full bg-gradient-to-br from-[#9ae600] to-neutral-800 flex items-center justify-center font-bold text-sm font-mono text-black">
+                                AV</div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-base">Alexander Vance</h4>
+                                <span class="text-xs text-gray-400 font-sans">CTO, Vance FinTech Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="testimonial-card p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-white/12 backdrop-blur-2xl flex flex-col justify-between hover:border-[#9ae600]/40 transition-all duration-300 shadow-2xl">
+                        <div>
+                            <div class="rating flex items-center gap-1 text-[#9ae600] text-sm mb-4">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
+                                "Rarely do you find a developer who writes rock-solid Python backend code while having
+                                the design finesse to deliver buttery smooth React &amp; Tailwind animations.
+                                Outstanding work!"
+                            </p>
+                        </div>
+                        <div class="client-meta flex items-center gap-4 pt-4 border-t border-white/10">
+                            <div
+                                class="w-11 h-11 rounded-full bg-gradient-to-br from-cyan-400 to-neutral-800 flex items-center justify-center font-bold text-sm font-mono text-black">
+                                SJ</div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-base">Sarah Jenkins</h4>
+                                <span class="text-xs text-gray-400 font-sans">Head of Engineering, Trava Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="testimonial-card p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-white/12 backdrop-blur-2xl flex flex-col justify-between hover:border-[#9ae600]/40 transition-all duration-300 shadow-2xl">
+                        <div>
+                            <div class="rating flex items-center gap-1 text-[#9ae600] text-sm mb-4">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
+                                "Arish delivered full stack features ahead of schedule. Clean Git commit hygiene,
+                                comprehensive API documentation, and zero database migration bugs. A true professional."
+                            </p>
+                        </div>
+                        <div class="client-meta flex items-center gap-4 pt-4 border-t border-white/10">
+                            <div
+                                class="w-11 h-11 rounded-full bg-gradient-to-br from-emerald-400 to-neutral-800 flex items-center justify-center font-bold text-sm font-mono text-black">
+                                MR</div>
+                            <div>
+                                <h4 class="font-heading font-bold text-white text-base">Marcus Reed</h4>
+                                <span class="text-xs text-gray-400 font-sans">Lead Architect, Rogue Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer id="contact" class="site-footer max-w-7xl mx-auto px-6 pt-24 pb-12">
+                <div class="glass-panel p-10 sm:p-14 lg:p-16">
+                    <div class="footer-cta text-center max-w-3xl mx-auto mb-16">
+                        <div class="section-badge-pill mb-4 inline-flex">
+                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Next Project —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Ready for the next build?</span>
+                        </div>
+                        <h2 class="text-4xl sm:text-6xl font-heading font-bold leading-tight mb-8 text-white">
+                            Let's Build Scalable Software &amp; Modern Web Applications
+                        </h2>
+                        <div class="footer-actions flex flex-wrap justify-center gap-4">
+                            <a href="mailto:hello@arish.dev" class="btn-primary footer-btn flex items-center gap-2">
+                                <span>Contact Me Directly</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                            <a href="#projects" class="btn-secondary flex items-center gap-2">
+                                <span>Inspect Source Code</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="footer-bottom flex flex-col md:flex-row justify-between items-start gap-12 pt-10 border-t border-white/10">
+                        <div class="footer-brand max-w-md">
+                            <div class="logo font-heading text-2xl font-extrabold tracking-wider flex items-center gap-2">
+                                <span class="text-[#9ae600] font-mono text-base">&lt;/&gt;</span>
+                                <span class="text-white">ARISH<span class="text-[#9ae600]">.DEV</span></span>
+                            </div>
+                            <p class="text-gray-300 text-sm mt-3 leading-relaxed font-sans">
+                                Full Stack Software Developer specializing in Java, Python, React, JavaScript, and SQL.
+                                Focused on performance, architecture, and delightful user experiences.
+                            </p>
+                            <div class="flex items-center gap-2 mt-4 text-xs font-mono text-[#9ae600]">
+                                <span class="w-2 h-2 rounded-full bg-[#9ae600] animate-pulse"></span>
+                                Open to Full-Time, Contract &amp; Remote Roles
+                            </div>
+                        </div>
+
+                        <div class="footer-links-group flex gap-16">
+                            <div class="footer-nav font-sans">
+                                <h4 class="font-heading font-bold text-white text-lg mb-4 tracking-wide">Navigation</h4>
+                                <a href="#about"
+                                    class="block text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors">About</a>
+                                <a href="#skills"
+                                    class="block text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors">Tech
+                                    Stack</a>
+                                <a href="#projects"
+                                    class="block text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors">Projects</a>
+                                <a href="#testimonials"
+                                    class="block text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors">Testimonials</a>
+                                <a href="#contact"
+                                    class="block text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors">Contact</a>
+                            </div>
+
+                            <div class="footer-socials font-sans">
+                                <h4 class="font-heading font-bold text-white text-lg mb-4 tracking-wide">Profiles</h4>
+                                <a href="https://github.com" target="_blank"
+                                    class="flex items-center gap-2 text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors"><i
+                                        class="devicon-github-original text-base"></i> GitHub ↗</a>
+                                <a href="https://linkedin.com" target="_blank"
+                                    class="flex items-center gap-2 text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors"><i
+                                        class="devicon-linkedin-plain text-base"></i> LinkedIn ↗</a>
+                                <a href="https://twitter.com" target="_blank"
+                                    class="flex items-center gap-2 text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors"><i
+                                        class="devicon-twitter-original text-base"></i> Twitter / X ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="footer-copyright flex flex-col sm:flex-row justify-between items-center text-gray-400 text-xs pt-8 mt-6 border-t border-white/10 gap-4 font-sans">
+                        <p>© 2026 Arish S. Full Stack Software Developer.</p>
+                        <p class="font-mono text-gray-400">Built with Java • Python • React • SQL • Tailwind</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+
+</html>

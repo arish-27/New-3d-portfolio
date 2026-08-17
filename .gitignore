@@ -1,0 +1,5 @@
+# Compressed archive & video recordings
+*.zip
+*.mp4
+.DS_Store
+Thumbs.db
