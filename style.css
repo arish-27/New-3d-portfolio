@@ -47,7 +47,7 @@ canvas {
     z-index: 1;
     pointer-events: none;
     background: radial-gradient(circle at 50% 35%, transparent 20%, rgba(8, 10, 14, 0.4) 65%, rgba(6, 8, 12, 0.8) 100%),
-                linear-gradient(to bottom, rgba(8, 10, 14, 0.25) 0%, transparent 20%, transparent 80%, rgba(8, 10, 14, 0.6) 100%);
+        linear-gradient(to bottom, rgba(8, 10, 14, 0.25) 0%, transparent 20%, transparent 80%, rgba(8, 10, 14, 0.6) 100%);
 }
 
 /* Content Overlay Layer */
@@ -86,7 +86,7 @@ canvas {
 }
 
 .drifting-code.accent {
-    color: rgba(154, 230, 0, 0.88);
+    color: rgba(62, 87, 12, 0.88);
     opacity: 0.22;
 }
 
@@ -106,6 +106,7 @@ canvas {
     left: 8%;
     animation: driftDown 24s linear infinite;
 }
+
 .drift-down-2 {
     top: -15%;
     left: 76%;
@@ -118,6 +119,7 @@ canvas {
     left: 24%;
     animation: driftUp 26s linear infinite 2s;
 }
+
 .drift-up-2 {
     bottom: -15%;
     left: 64%;
@@ -130,6 +132,7 @@ canvas {
     left: -35%;
     animation: driftRight 34s linear infinite 1s;
 }
+
 .drift-right-2 {
     top: 68%;
     left: -45%;
@@ -142,6 +145,7 @@ canvas {
     right: -35%;
     animation: driftLeft 36s linear infinite 4s;
 }
+
 .drift-left-2 {
     top: 86%;
     right: -45%;
@@ -149,31 +153,83 @@ canvas {
 }
 
 @keyframes driftDown {
-    0% { transform: translateY(-5vh); opacity: 0; }
-    15% { opacity: 0.2; }
-    85% { opacity: 0.2; }
-    100% { transform: translateY(115vh); opacity: 0; }
+    0% {
+        transform: translateY(-5vh);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.2;
+    }
+
+    85% {
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(115vh);
+        opacity: 0;
+    }
 }
 
 @keyframes driftUp {
-    0% { transform: translateY(5vh); opacity: 0; }
-    15% { opacity: 0.2; }
-    85% { opacity: 0.2; }
-    100% { transform: translateY(-115vh); opacity: 0; }
+    0% {
+        transform: translateY(5vh);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.2;
+    }
+
+    85% {
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(-115vh);
+        opacity: 0;
+    }
 }
 
 @keyframes driftRight {
-    0% { transform: translateX(-5vw); opacity: 0; }
-    15% { opacity: 0.22; }
-    85% { opacity: 0.22; }
-    100% { transform: translateX(140vw); opacity: 0; }
+    0% {
+        transform: translateX(-5vw);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.22;
+    }
+
+    85% {
+        opacity: 0.22;
+    }
+
+    100% {
+        transform: translateX(140vw);
+        opacity: 0;
+    }
 }
 
 @keyframes driftLeft {
-    0% { transform: translateX(5vw); opacity: 0; }
-    15% { opacity: 0.22; }
-    85% { opacity: 0.22; }
-    100% { transform: translateX(-140vw); opacity: 0; }
+    0% {
+        transform: translateX(5vw);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.22;
+    }
+
+    85% {
+        opacity: 0.22;
+    }
+
+    100% {
+        transform: translateX(-140vw);
+        opacity: 0;
+    }
 }
 
 /* Font Family Utility Classes */
@@ -331,9 +387,17 @@ canvas {
     display: inline-block;
 }
 
-.terminal-dot.red { background: #ff5f56; }
-.terminal-dot.yellow { background: #ffbd2e; }
-.terminal-dot.green { background: #27c93f; }
+.terminal-dot.red {
+    background: #ff5f56;
+}
+
+.terminal-dot.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-dot.green {
+    background: #27c93f;
+}
 
 /* Glass Section Container (High readability over 3D background) */
 .glass-panel {
@@ -528,13 +592,22 @@ canvas {
    Custom Developer Cursor: </> with Click Blinking
    =================================================== */
 @media (pointer: fine) {
-    body, a, button, input, textarea, select, [role="button"] {
+
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    select,
+    [role="button"] {
         cursor: none !important;
     }
 }
 
 @media (pointer: coarse) {
-    #custom-cursor, #custom-cursor-follower {
+
+    #custom-cursor,
+    #custom-cursor-follower {
         display: none !important;
     }
 }
@@ -612,10 +685,12 @@ canvas {
         background: #b4fa00;
         color: #000;
     }
+
     20% {
         opacity: 0.1;
         transform: translate(-50%, -50%) scale(0.85);
     }
+
     40% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.25);
@@ -623,16 +698,19 @@ canvas {
         background: #9ae600;
         color: #000;
     }
+
     60% {
         opacity: 0.15;
         transform: translate(-50%, -50%) scale(0.9);
     }
+
     80% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.1);
         background: rgba(8, 11, 15, 0.9);
         color: #9ae600;
     }
+
     100% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
@@ -664,6 +742,7 @@ canvas {
         transform: translate(-50%, -50%) scale(0.5);
         box-shadow: 0 0 20px #9ae600;
     }
+
     100% {
         width: 75px;
         height: 75px;
