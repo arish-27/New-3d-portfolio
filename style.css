@@ -296,12 +296,13 @@ canvas {
 }
 
 .hero-left {
-    max-width: 440px;
+    max-width: 410px;
+    z-index: 20;
 }
 
 .hero-left h2 {
     text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95);
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
 .trust-badge {
@@ -310,6 +311,7 @@ canvas {
 
 .hero-desc {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+    line-height: 1.65;
 }
 
 /* Hacker / Dev Terminal Badges & Accents */
@@ -421,20 +423,30 @@ canvas {
     padding-top: 60px;
 }
 
-/* Marquee Section */
+/* Marquee Section with Gap & Left-to-Right Scrolling */
+.marquee-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0 30px;
+    position: relative;
+    z-index: 10;
+}
+
 .marquee-section {
-    padding: 28px 0;
+    padding: 20px 0;
     overflow: hidden;
     white-space: nowrap;
-    border-top: 1px solid rgba(154, 230, 0, 0.2);
-    border-bottom: 1px solid rgba(154, 230, 0, 0.2);
-    background: rgba(8, 10, 14, 0.82);
-    backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(154, 230, 0, 0.25);
+    border-bottom: 1px solid rgba(154, 230, 0, 0.25);
+    background: rgba(8, 10, 14, 0.88);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .marquee-content {
     display: inline-block;
-    animation: marquee 26s linear infinite;
+    animation: marqueeReverse 28s linear infinite;
     font-family: 'Syne', sans-serif;
     font-weight: 700;
 }
@@ -443,18 +455,8 @@ canvas {
     margin: 0 22px;
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.marquee-content.reverse {
-    animation: marqueeReverse 28s linear infinite;
+.marquee-content.ltr {
+    animation: marqueeReverse 30s linear infinite;
 }
 
 @keyframes marqueeReverse {
