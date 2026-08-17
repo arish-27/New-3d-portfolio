@@ -453,6 +453,20 @@ canvas {
     }
 }
 
+.marquee-content.reverse {
+    animation: marqueeReverse 28s linear infinite;
+}
+
+@keyframes marqueeReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* Tag style */
 .tag {
     display: inline-block;
