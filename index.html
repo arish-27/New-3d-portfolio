@@ -169,17 +169,14 @@
             <div class="hero-bottom-content">
                 <!-- Left Details with Unified Name & Clear Face Margin -->
                 <div class="hero-left">
-                    <!-- Script Accent Motif - Bold, Thick & High-Visibility -->
-                    <div class="flex items-center gap-2.5 mb-2">
+                    <!-- Script Accent Motif - Pure Stylized Typography (No Box, Clear Face Margin) -->
+                    <div class="flex items-center gap-2 mb-1.5">
                         <span
-                            class="font-script text-[#9ae600] text-3xl sm:text-4xl font-black -rotate-6 inline-block drop-shadow-[0_0_18px_rgba(154,230,0,0.9)] filter brightness-125">My</span>
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-black/85 border border-[#9ae600] shadow-[0_0_20px_rgba(154,230,0,0.35)] backdrop-blur-xl">
-                            <span
-                                class="font-heading font-black text-sm sm:text-base text-white tracking-widest uppercase">PORTFOLIO</span>
-                            <span
-                                class="font-mono text-[11px] font-extrabold text-[#9ae600] bg-[#9ae600]/20 px-1.5 py-0.5 rounded border border-[#9ae600]/50">&lt;SRC /&gt;</span>
-                        </div>
+                            class="font-script text-[#9ae600] text-3xl sm:text-4xl font-black -rotate-6 inline-block drop-shadow-[0_0_16px_rgba(154,230,0,0.95)]">My</span>
+                        <span
+                            class="font-heading font-black text-xl sm:text-2xl text-white tracking-widest uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+                            PORTFOLIO <span class="text-[#9ae600] font-mono text-xs font-bold align-middle tracking-normal">// src</span>
+                        </span>
                     </div>
 
                     <h1
@@ -534,192 +531,249 @@
                 </div>
 
                 <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <!-- Project 1: Java & Spring Boot Enterprise -->
-                    <div class="project-card group glass-panel p-6 sm:p-8">
-                        <div
-                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
-                            <div class="flex justify-between items-start">
-                                <span
-                                    class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
-                                    Java • Spring Boot • SQL
-                                </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
+                    <!-- Project 1: Real-Time Network Telemetry Monitoring System -->
+                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-64 transition-all">
+                                <div class="flex justify-between items-start">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
+                                        Java • Spring Boot • InfluxDB • Grafana
+                                    </span>
+                                    <a href="https://github.com/arish-27/" target="_blank" class="p-1.5 rounded-lg bg-white/5 hover:bg-[#9ae600] text-gray-400 hover:text-black transition-colors" title="View Source">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="my-auto text-center font-mono">
+                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
+                                        <i class="devicon-java-plain text-orange-400"></i>
+                                        <i class="devicon-spring-plain text-green-500"></i>
+                                        <i class="devicon-grafana-plain text-orange-500"></i>
+                                    </div>
+                                    <p class="text-base sm:text-lg text-white font-bold font-heading">Network Telemetry Engine</p>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                    <span class="inline-flex items-center gap-1.5 text-[#9ae600]">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                        Low Latency
+                                    </span>
+                                    <span>•</span>
+                                    <span>Distributed Pipeline</span>
+                                </div>
                             </div>
-                            <div class="my-auto text-center font-mono">
-                                <i class="devicon-java-plain text-5xl text-orange-400 block mb-2"></i>
-                                <p class="text-lg text-gray-200 font-semibold font-display">Enterprise Cloud API &amp;
-                                    Microservices</p>
-                            </div>
-                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#9ae600]"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                    </svg> 99.9% Uptime</span>
-                                <span>•</span>
-                                <span>RESTful Architecture</span>
+                            <div class="project-info mt-6">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                    Real-Time Network Telemetry Monitoring System
+                                </h3>
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Designed and built a distributed, Spring Boot-based telemetry pipeline that collects and processes real-time metrics (CPU, memory, latency, packet loss) across monitored nodes.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Implemented threshold-based alerting logic with efficient in-memory data structures to detect anomalies with low latency at scale.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Modeled high-throughput time-series data in InfluxDB and built Grafana dashboards for real-time visualization and performance analysis.</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="project-info mt-6">
-                            <h3
-                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
-                                Enterprise Banking &amp; Transaction Engine
-                            </h3>
-                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
-                                Scalable financial transaction backend built with Java and Spring Boot. Integrated with
-                                MySQL for ACID-compliant ledger records, JWT security, and Dockerized deployment.
-                            </p>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="tag">Java 17</span>
-                                <span class="tag">Spring Boot</span>
-                                <span class="tag">MySQL</span>
-                                <span class="tag">Docker</span>
-                            </div>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">InfluxDB</span>
+                            <span class="tag">Grafana</span>
+                            <span class="tag">Distributed Systems</span>
                         </div>
                     </div>
 
-                    <!-- Project 2: Python AI & FastAPI Dashboard -->
-                    <div class="project-card group glass-panel p-6 sm:p-8">
-                        <div
-                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
-                            <div class="flex justify-between items-start">
-                                <span
-                                    class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold">
-                                    Python • React • FastAPI
-                                </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
+                    <!-- Project 2: AI-Powered Resume Analyzer & Mock Interviewer -->
+                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-64 transition-all">
+                                <div class="flex justify-between items-start">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold">
+                                        React • Python • Flask • Gemini AI
+                                    </span>
+                                    <a href="https://github.com/arish-27/" target="_blank" class="p-1.5 rounded-lg bg-white/5 hover:bg-[#9ae600] text-gray-400 hover:text-black transition-colors" title="View Source">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="my-auto text-center font-mono">
+                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
+                                        <i class="devicon-react-original text-cyan-400"></i>
+                                        <i class="devicon-python-plain text-yellow-400"></i>
+                                        <i class="devicon-flask-original text-white"></i>
+                                    </div>
+                                    <p class="text-base sm:text-lg text-white font-bold font-heading">AI Resume &amp; Voice Mock System</p>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                    <span class="inline-flex items-center gap-1.5 text-cyan-400">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                        Gemini AI Powered
+                                    </span>
+                                    <span>•</span>
+                                    <span>Real-Time Voice Scoring</span>
+                                </div>
                             </div>
-                            <div class="my-auto text-center font-mono">
-                                <i class="devicon-python-plain text-5xl text-yellow-400 block mb-2"></i>
-                                <p class="text-lg text-gray-200 font-semibold font-display">Real-Time Data Analytics
-                                    Engine
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-cyan-400"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                    </svg> Asynchronous I/O</span>
-                                <span>•</span>
-                                <span>WebSocket Stream</span>
+                            <div class="project-info mt-6">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                    AI-Powered Resume Analyzer &amp; Mock Interviewer
+                                </h3>
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Architected a full-stack system (React frontend, Python/Flask REST APIs) that parses resumes, extracts structured skill data, and generates personalized interview questions.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Built a voice-based mock interview module integrating Gemini AI to evaluate responses and return real-time scoring and feedback.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Designed clean API contracts between frontend and backend services to keep the system modular and scalable.</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="project-info mt-6">
-                            <h3
-                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
-                                Intelligent Predictive Analytics Platform
-                            </h3>
-                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
-                                High-speed asynchronous Python backend using FastAPI and Pandas. Delivers live data
-                                telemetry to an interactive React dashboard styled with Tailwind CSS charts.
-                            </p>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="tag">Python</span>
-                                <span class="tag">FastAPI</span>
-                                <span class="tag">React.js</span>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
+                            <span class="tag">React</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Gemini AI</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Driver Drowsiness Detection System -->
+                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-64 transition-all">
+                                <div class="flex justify-between items-start">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 font-semibold">
+                                        Java • OpenCV • Computer Vision
+                                    </span>
+                                    <a href="https://github.com/arish-27/" target="_blank" class="p-1.5 rounded-lg bg-white/5 hover:bg-[#9ae600] text-gray-400 hover:text-black transition-colors" title="View Source">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="my-auto text-center font-mono">
+                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
+                                        <i class="devicon-java-plain text-orange-400"></i>
+                                        <i class="devicon-opencv-plain text-blue-400"></i>
+                                    </div>
+                                    <p class="text-base sm:text-lg text-white font-bold font-heading">Computer Vision Safety System</p>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                    <span class="inline-flex items-center gap-1.5 text-yellow-400">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                        Real-Time Inference
+                                    </span>
+                                    <span>•</span>
+                                    <span>Facial Landmark Tracking</span>
+                                </div>
+                            </div>
+                            <div class="project-info mt-6">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                    Driver Drowsiness Detection System
+                                </h3>
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Built a real-time computer vision system using face/eye-tracking algorithms to detect prolonged eye closure and trigger alerts.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Optimized detection logic for low-latency inference suitable for continuous, real-time operation.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Implemented alert audio buzzer and visual triggers to ensure driver alertness and prevent accidents.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
+                            <span class="tag">Java</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Eye Tracking</span>
+                            <span class="tag">Low-Latency AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Interactive 3D Cinematic Developer Portfolio -->
+                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between border-[#9ae600]/40">
+                        <div>
+                            <div class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-[#9ae600]/30 p-6 flex flex-col justify-between h-64 transition-all">
+                                <div class="flex justify-between items-start">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/40 font-semibold">
+                                        Live Project • 3D Canvas • ES2026
+                                    </span>
+                                    <a href="https://shorturl.at/Hha4p" target="_blank" class="p-1.5 rounded-lg bg-[#9ae600]/20 hover:bg-[#9ae600] text-[#9ae600] hover:text-black transition-colors" title="Live Preview">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="my-auto text-center font-mono">
+                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
+                                        <i class="devicon-javascript-plain text-yellow-400"></i>
+                                        <i class="devicon-html5-plain text-orange-500"></i>
+                                        <i class="devicon-tailwindcss-plain text-cyan-300"></i>
+                                    </div>
+                                    <p class="text-base sm:text-lg text-white font-bold font-heading">3D Scroll Animation &amp; UI Engine</p>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+                                    <span class="inline-flex items-center gap-1.5 text-[#9ae600]">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                        60 FPS Canvas
+                                    </span>
+                                    <span>•</span>
+                                    <a href="https://shorturl.at/Hha4p" target="_blank" class="text-[#9ae600] hover:underline font-bold">shorturl.at/Hha4p ↗</a>
+                                </div>
+                            </div>
+                            <div class="project-info mt-6">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+                                        Interactive 3D Cinematic Portfolio
+                                    </h3>
+                                </div>
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Engineered a 240-frame dynamic scroll-driven 3D background animation with hardware-accelerated HTML5 canvas rendering and real-time frame interpolation.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Built custom developer cursor &lt;/&gt; with smooth mouse tracking, blinking click pulses, and multi-directional ambient drifting code stream.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-[#9ae600] font-bold mt-0.5">●</span>
+                                        <span>Deployed production-grade responsive architecture with 60fps scrolling and dark glassmorphic aesthetics.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">JavaScript (ES2026)</span>
+                                <span class="tag">HTML5 Canvas</span>
                                 <span class="tag">Tailwind CSS</span>
+                                <span class="tag">3D Rendering</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Modern React SaaS Platform -->
-                    <div class="project-card group glass-panel p-6 sm:p-8">
-                        <div
-                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
-                            <div class="flex justify-between items-start">
-                                <span
-                                    class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
-                                    React • JavaScript • SQL
-                                </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </div>
-                            <div class="my-auto text-center font-mono">
-                                <i class="devicon-react-original text-5xl text-cyan-400 block mb-2"></i>
-                                <p class="text-lg text-gray-200 font-semibold font-display">Full Stack E-Commerce &amp;
-                                    SaaS</p>
-                            </div>
-                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#9ae600]"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                    </svg> Stripe Payments</span>
-                                <span>•</span>
-                                <span>Optimistic UI</span>
-                            </div>
-                        </div>
-                        <div class="project-info mt-6">
-                            <h3
-                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
-                                Next-Gen E-Commerce &amp; Inventory Hub
-                            </h3>
-                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
-                                Full-featured web platform with React state management, smooth micro-animations,
-                                relational SQL database architecture, and automated order fulfillment pipeline.
-                            </p>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="tag">React</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">SQL Database</span>
-                                <span class="tag">Tailwind CSS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: High Performance SQL & Database Management -->
-                    <div class="project-card group glass-panel p-6 sm:p-8">
-                        <div
-                            class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-72 transition-all">
-                            <div class="flex justify-between items-start">
-                                <span
-                                    class="px-3 py-1 rounded-full text-xs font-mono bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold">
-                                    Java • SQL • React
-                                </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </div>
-                            <div class="my-auto text-center font-mono">
-                                <i class="devicon-mysql-plain text-5xl text-blue-400 block mb-2"></i>
-                                <p class="text-lg text-gray-200 font-semibold font-display">Relational Database
-                                    Optimization Tool</p>
-                            </div>
-                            <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                <span class="inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#9ae600]"
-                                        fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                    </svg> Index Tuner</span>
-                                <span>•</span>
-                                <span>Query Profiler</span>
-                            </div>
-                        </div>
-                        <div class="project-info mt-6">
-                            <h3
-                                class="text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
-                                SQL Query Profiler &amp; Schema Inspector
-                            </h3>
-                            <p class="text-gray-300 text-sm my-3 leading-relaxed font-sans">
-                                Developer tool engineered to analyze complex SQL queries, index performance, and
-                                transaction locks with a responsive visual breakdown in React.
-                            </p>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="tag">MySQL / SQL</span>
-                                <span class="tag">Java Core</span>
-                                <span class="tag">React</span>
-                                <span class="tag">HTML5 / CSS3</span>
-                            </div>
+                            <a href="https://shorturl.at/Hha4p" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#9ae600] hover:underline">
+                                Live Link ↗
+                            </a>
                         </div>
                     </div>
                 </div>
