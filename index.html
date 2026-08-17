@@ -66,6 +66,41 @@
     <!-- Cinematic Ambient Layer for Enhanced Contrast & 3D Depth -->
     <div class="canvas-ambient-overlay"></div>
 
+    <!-- Ambient Drifting Background Code Layer (No Boxes, Pure Monospace Codes Moving in 4 Directions) -->
+    <div class="ambient-code-background">
+        <!-- Downward Drifting Codes (Top to Bottom) -->
+        <div class="drifting-code drift-down-1 accent">
+            @SpringBootApplication public class PortfolioApp { SpringApplication.run(PortfolioApp.class); }
+        </div>
+        <div class="drifting-code drift-down-2 cyan">
+            List&lt;User&gt; activeUsers = userRepo.findAll().stream().filter(User::isActive).toList();
+        </div>
+
+        <!-- Upward Drifting Codes (Bottom to Top) -->
+        <div class="drifting-code drift-up-1 amber">
+            @RestController @RequestMapping("/api/v1/auth") public ResponseEntity&lt;Token&gt; login()
+        </div>
+        <div class="drifting-code drift-up-2">
+            public CompletableFuture&lt;Data&gt; fetchAsync() { return CompletableFuture.supplyAsync(service::load); }
+        </div>
+
+        <!-- Left to Right Drifting Codes -->
+        <div class="drifting-code drift-right-1 accent">
+            SELECT u.id, u.username, r.role_name FROM users u JOIN user_roles r ON u.role_id = r.id;
+        </div>
+        <div class="drifting-code drift-right-2 cyan">
+            const [state, dispatch] = useReducer(appReducer, { loading: false, data: [] });
+        </div>
+
+        <!-- Right to Left Drifting Codes -->
+        <div class="drifting-code drift-left-1 amber">
+            git commit -m "feat(backend): optimize SQL query indexing &amp; REST response latency"
+        </div>
+        <div class="drifting-code drift-left-2">
+            int mid = left + (right - left) / 2; if (arr[mid] == target) return mid;
+        </div>
+    </div>
+
     <!-- Custom Developer Cursor: </> with Click Blinking -->
     <div id="custom-cursor" class="custom-cursor">
         <div id="cursor-badge" class="cursor-badge">
@@ -90,27 +125,29 @@
                 <a href="#testimonials" class="text-gray-300 transition-colors hover:text-[#9ae600]">Reviews</a>
                 <a href="#contact" class="text-gray-300 transition-colors hover:text-[#9ae600]">Contact</a>
             </nav>
-            <a href="#contact" class="btn-primary cta-btn flex items-center gap-1.5">
-                <span>Hire Full Stack</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/arish-27/" target="_blank"
+                    class="p-2 rounded-full text-gray-300 hover:text-[#9ae600] hover:bg-white/5 transition-colors hidden sm:inline-flex"
+                    title="GitHub">
+                    Github<i class="devicon-github-original text-base"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arish-s-a31a5737a" target="_blank"
+                    class="p-2 rounded-full text-gray-300 hover:text-[#9ae600] hover:bg-white/5 transition-colors hidden sm:inline-flex"
+                    title="LinkedIn">
+                    <i class="devicon-linkedin-plain text-base"></i>
+                </a>
+                <a href="#contact" class="btn-primary cta-btn flex items-center gap-1.5">
+                    <span>Hire Full Stack</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
         </header>
 
         <!-- Hero Section -->
         <section class="hero-section relative">
-            <!-- Floating Java Code Snippet 1 (Top Right) -->
-            <div class="floating-code-chip float-code-1 top-28 right-8 lg:right-16 hidden lg:block">
-                <div><span class="kw-annotation">@SpringBootApplication</span></div>
-                <div><span class="kw-type">public class</span> <span class="text-white font-bold">PortfolioApp</span> {</div>
-                <div class="pl-3"><span class="kw-type">public static void</span> <span class="kw-func">main</span>(<span class="kw-type">String</span>[] args) {</div>
-                <div class="pl-6"><span class="text-white">SpringApplication</span>.<span class="kw-func">run</span>(PortfolioApp.<span class="kw-type">class</span>);</div>
-                <div class="pl-3">}</div>
-                <div>}</div>
-            </div>
-
             <div class="hero-top-text flex items-center gap-3">
                 <span
                     class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-black/85 text-[#9ae600] border border-[#9ae600]/40 backdrop-blur-md shadow-xl">
@@ -125,20 +162,25 @@
                 <div class="hero-left">
                     <!-- Script Accent Motif -->
                     <div class="flex items-center gap-2 mb-1.5">
-                        <span class="font-script text-[#9ae600] text-3xl sm:text-4xl font-bold -rotate-6 inline-block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">My</span>
-                        <span class="text-xs font-mono tracking-widest text-gray-300 uppercase">&lt;PORTFOLIO_SRC /&gt;</span>
+                        <span
+                            class="font-script text-[#9ae600] text-3xl sm:text-4xl font-bold -rotate-6 inline-block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">My</span>
+                        <span class="text-xs font-mono tracking-widest text-gray-300 uppercase">&lt;PORTFOLIO_SRC
+                            /&gt;</span>
                     </div>
 
-                    <h1 class="hero-name-title font-heading text-4xl sm:text-5xl font-extrabold text-white tracking-tight uppercase leading-none mb-3">
+                    <h1
+                        class="hero-name-title font-heading text-4xl sm:text-5xl font-extrabold text-white tracking-tight uppercase leading-none mb-3">
                         ARISH <span class="text-[#9ae600]">S.</span>
                     </h1>
 
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/70 border border-[#9ae600]/40 backdrop-blur-md mb-3.5">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/70 border border-[#9ae600]/40 backdrop-blur-md mb-3.5">
                         <span class="text-[#9ae600] font-mono text-xs font-bold">&gt;_</span>
                         <span class="font-mono text-xs font-bold tracking-wider text-gray-100 uppercase">
                             FULL STACK DEVELOPER
                         </span>
-                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#9ae600]/20 text-[#9ae600]">v2.4</span>
+                        <span
+                            class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#9ae600]/20 text-[#9ae600]">v2.4</span>
                     </div>
 
                     <h2 class="text-lg sm:text-xl font-heading font-bold leading-snug mb-3 text-white">
@@ -146,7 +188,8 @@
                     </h2>
                     <p class="text-gray-300 text-xs sm:text-sm mb-5 font-light max-w-sm hero-desc leading-relaxed">
                         Specialized in <strong class="text-white font-medium">Java, Python, &amp; MySQL</strong> robust
-                        backend architectures combined with modern <strong class="text-[#9ae600] font-medium">React, JavaScript, and
+                        backend architectures combined with modern <strong class="text-[#9ae600] font-medium">React,
+                            JavaScript, and
                             Tailwind CSS</strong> frontends.
                     </p>
                     <div class="action-buttons flex flex-wrap gap-3">
@@ -165,16 +208,29 @@
                             </svg>
                         </a>
                     </div>
+
+                    <!-- Developer Profile Badges -->
+                    <div class="flex items-center flex-wrap gap-2.5 mt-5">
+                        <a href="https://github.com/arish-27/" target="_blank"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 hover:border-[#9ae600] text-gray-300 hover:text-[#9ae600] text-xs font-mono transition-colors"
+                            title="GitHub Profile">
+                            <i class="devicon-github-original text-sm"></i> github.com/arish-27 ↗
+                        </a>
+                        <a href="https://www.linkedin.com/in/arish-s-a31a5737a" target="_blank"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 hover:border-[#9ae600] text-gray-300 hover:text-[#9ae600] text-xs font-mono transition-colors"
+                            title="LinkedIn Profile">
+                            <i class="devicon-linkedin-plain text-sm text-blue-400"></i> LinkedIn ↗
+                        </a>
+                        <a href="https://leetcode.com/u/MWbc0YXkin/" target="_blank"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 hover:border-[#9ae600] text-gray-300 hover:text-[#9ae600] text-xs font-mono transition-colors"
+                            title="LeetCode Profile">
+                            <i class="devicon-cplusplus-plain text-sm text-yellow-400"></i> LeetCode ↗
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Right Tech Stats Floating Card with Terminal Window Dots -->
                 <div class="hero-right relative">
-                    <!-- Floating Java Code Chip 2 -->
-                    <div class="floating-code-chip float-code-2 -top-12 -left-8 hidden md:block">
-                        <span class="kw-annotation">@RestController</span>
-                        <span class="kw-annotation">@RequestMapping</span>(<span class="kw-string">"/api/v2"</span>)
-                    </div>
-
                     <div class="glass-card stats-card animate-float-slow">
                         <div class="terminal-bar">
                             <span class="terminal-dot red"></span>
@@ -265,20 +321,13 @@
 
             <!-- About Developer Section -->
             <section id="about" class="about-section max-w-7xl mx-auto px-6 py-24 relative">
-                <!-- Floating Java Code Chip in About -->
-                <div class="floating-code-chip float-code-3 top-8 right-12 hidden lg:block">
-                    <div><span class="kw-comment">// Java 17 Stream Pipeline</span></div>
-                    <div><span class="kw-type">List</span>&lt;<span class="kw-type">Response</span>&gt; out = list.<span class="kw-func">stream</span>()</div>
-                    <div class="pl-4">.<span class="kw-func">filter</span>(Objects::nonNull)</div>
-                    <div class="pl-4">.<span class="kw-func">map</span>(Service::transform)</div>
-                    <div class="pl-4">.<span class="kw-func">toList</span>();</div>
-                </div>
-
                 <div class="glass-panel p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row justify-between gap-12">
                     <div class="about-left lg:w-1/3">
                         <div class="section-badge-pill mb-4">
-                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">About —</span>
-                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Full Stack Engineer</span>
+                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">About
+                                —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Full Stack
+                                Engineer</span>
                         </div>
                         <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white leading-tight">
                             Bridging Complex Backend Systems With Fluid Frontend Experiences
@@ -286,23 +335,28 @@
                     </div>
                     <div class="about-right lg:w-2/3 max-w-2xl">
                         <p class="about-text text-xl sm:text-2xl text-gray-200 font-light leading-relaxed mb-6">
-                            Hey there, I'm <strong class="text-white font-medium">Arish S</strong> — a full stack developer
+                            Hey there, I'm <strong class="text-white font-medium">Arish S</strong> — a full stack
+                            developer
                             driven by creating resilient software. I build enterprise-grade backends using <strong
                                 class="text-orange-400 font-medium">Java &amp; Python</strong>, coupled with optimized
-                            <strong class="text-blue-400 font-medium">SQL databases</strong> and dynamic, high-performance
+                            <strong class="text-blue-400 font-medium">SQL databases</strong> and dynamic,
+                            high-performance
                             <strong class="text-[#9ae600] font-medium">React &amp; JavaScript</strong> user interfaces.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                            <div class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
+                            <div
+                                class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
                                 <h4 class="text-xl sm:text-2xl font-mono font-bold text-[#9ae600]">100%</h4>
                                 <p class="text-xs text-gray-400 mt-1 font-sans">Responsive &amp; Mobile-First</p>
                             </div>
-                            <div class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
+                            <div
+                                class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
                                 <h4 class="text-lg sm:text-xl font-mono font-bold text-[#9ae600]">SQL / NoSQL</h4>
                                 <p class="text-xs text-gray-400 mt-1 font-sans">Optimized Queries &amp; Schema</p>
                             </div>
-                            <div class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
+                            <div
+                                class="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-[#9ae600]/40 transition-colors">
                                 <h4 class="text-lg sm:text-xl font-mono font-bold text-[#9ae600]">REST &amp; JWT</h4>
                                 <p class="text-xs text-gray-400 mt-1 font-sans">Secure Auth &amp; Cloud APIs</p>
                             </div>
@@ -330,22 +384,17 @@
 
             <!-- Comprehensive Tech Stack Grid Section -->
             <section id="skills" class="skills-section max-w-7xl mx-auto px-6 py-20 relative">
-                <!-- Floating Java Code in Skills -->
-                <div class="floating-code-chip float-code-4 top-4 right-12 hidden lg:block">
-                    <div><span class="kw-annotation">@Autowired</span></div>
-                    <div><span class="kw-type">private</span> <span class="text-white font-semibold">UserService</span> userService;</div>
-                </div>
-                <div class="floating-code-chip float-code-1 bottom-4 left-10 hidden lg:block">
-                    <div><span class="kw-type">public record</span> <span class="text-white font-semibold">AuthResponse</span>(<span class="kw-type">String</span> token, <span class="kw-type">Long</span> id) {}</div>
-                </div>
-
                 <div class="glass-panel p-8 sm:p-10 text-center max-w-4xl mx-auto mb-12">
                     <div class="section-badge-pill mb-4 inline-flex">
-                        <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Skills —</span>
-                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Technical Proficiency</span>
+                        <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Skills
+                            —</span>
+                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Technical
+                            Proficiency</span>
                     </div>
-                    <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Mastered Tech Stack &amp; Tools</h2>
-                    <p class="text-gray-300 text-sm mt-3 font-sans max-w-xl mx-auto">From database design to frontend animations, here are the
+                    <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Mastered Tech Stack &amp; Tools
+                    </h2>
+                    <p class="text-gray-300 text-sm mt-3 font-sans max-w-xl mx-auto">From database design to frontend
+                        animations, here are the
                         technologies I leverage daily.</p>
                 </div>
 
@@ -443,19 +492,17 @@
 
             <!-- Projects Showcase Section -->
             <section id="projects" class="projects-section max-w-7xl mx-auto px-6 py-20 relative">
-                <!-- Floating Java Code in Projects -->
-                <div class="floating-code-chip float-code-2 top-4 right-12 hidden lg:block">
-                    <div><span class="kw-annotation">@Transactional</span></div>
-                    <div><span class="kw-type">public</span> <span class="kw-type">ResponseEntity</span>&lt;<span class="text-white">Project</span>&gt; <span class="kw-func">deploy</span>() {}</div>
-                </div>
-
-                <div class="projects-header glass-panel p-8 sm:p-10 flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div
+                    class="projects-header glass-panel p-8 sm:p-10 flex flex-col md:flex-row md:items-end justify-between mb-12">
                     <div>
                         <div class="section-badge-pill mb-4 inline-flex">
-                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Featured —</span>
-                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Selected Applications</span>
+                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Featured
+                                —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Selected
+                                Applications</span>
                         </div>
-                        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Production-Grade Software Projects
+                        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Production-Grade Software
+                            Projects
                         </h2>
                     </div>
                     <p class="text-gray-300 text-sm max-w-sm mt-4 md:mt-0 font-sans">
@@ -473,8 +520,8 @@
                                     class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
                                     Java • Spring Boot • SQL
                                 </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -520,15 +567,16 @@
                                     class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold">
                                     Python • React • FastAPI
                                 </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
                             </div>
                             <div class="my-auto text-center font-mono">
                                 <i class="devicon-python-plain text-5xl text-yellow-400 block mb-2"></i>
-                                <p class="text-lg text-gray-200 font-semibold font-display">Real-Time Data Analytics Engine
+                                <p class="text-lg text-gray-200 font-semibold font-display">Real-Time Data Analytics
+                                    Engine
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
@@ -567,8 +615,8 @@
                                     class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
                                     React • JavaScript • SQL
                                 </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -614,8 +662,8 @@
                                     class="px-3 py-1 rounded-full text-xs font-mono bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold">
                                     Java • SQL • React
                                 </span>
-                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 text-gray-500 group-hover:text-[#9ae600] transition-colors"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -658,11 +706,14 @@
             <section id="testimonials" class="testimonials-section max-w-7xl mx-auto px-6 py-20">
                 <div class="testimonials-header glass-panel p-8 sm:p-10 text-center max-w-4xl mx-auto mb-12">
                     <div class="section-badge-pill mb-4 inline-flex">
-                        <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Feedback —</span>
-                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Peer &amp; Client Reviews</span>
+                        <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Feedback
+                            —</span>
+                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Peer &amp; Client
+                            Reviews</span>
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white">Engineering Endorsements</h2>
-                    <p class="text-gray-300 text-sm mt-3 font-sans max-w-xl mx-auto">What engineering leaders, CTOs, and team leads say about
+                    <p class="text-gray-300 text-sm mt-3 font-sans max-w-xl mx-auto">What engineering leaders, CTOs, and
+                        team leads say about
                         collaborating with me.</p>
                 </div>
 
@@ -693,7 +744,8 @@
                                         d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
-                            <p class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
+                            <p
+                                class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
                                 "Arish architected our Java Spring Boot backend and connected it seamlessly to a
                                 responsive React frontend. His deep grasp of SQL query optimization reduced our API
                                 latency by 60%."
@@ -736,7 +788,8 @@
                                         d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
-                            <p class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
+                            <p
+                                class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
                                 "Rarely do you find a developer who writes rock-solid Python backend code while having
                                 the design finesse to deliver buttery smooth React &amp; Tailwind animations.
                                 Outstanding work!"
@@ -779,7 +832,8 @@
                                         d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                 </svg>
                             </div>
-                            <p class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
+                            <p
+                                class="testimonial-quote text-gray-200 text-base font-light leading-relaxed mb-6 font-sans">
                                 "Arish delivered full stack features ahead of schedule. Clean Git commit hygiene,
                                 comprehensive API documentation, and zero database migration bugs. A true professional."
                             </p>
@@ -802,8 +856,10 @@
                 <div class="glass-panel p-10 sm:p-14 lg:p-16">
                     <div class="footer-cta text-center max-w-3xl mx-auto mb-16">
                         <div class="section-badge-pill mb-4 inline-flex">
-                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Next Project —</span>
-                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Ready for the next build?</span>
+                            <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Next
+                                Project —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Ready for the next
+                                build?</span>
                         </div>
                         <h2 class="text-4xl sm:text-6xl font-heading font-bold leading-tight mb-8 text-white">
                             Let's Build Scalable Software &amp; Modern Web Applications
@@ -829,7 +885,8 @@
                     <div
                         class="footer-bottom flex flex-col md:flex-row justify-between items-start gap-12 pt-10 border-t border-white/10">
                         <div class="footer-brand max-w-md">
-                            <div class="logo font-heading text-2xl font-extrabold tracking-wider flex items-center gap-2">
+                            <div
+                                class="logo font-heading text-2xl font-extrabold tracking-wider flex items-center gap-2">
                                 <span class="text-[#9ae600] font-mono text-base">&lt;/&gt;</span>
                                 <span class="text-white">ARISH<span class="text-[#9ae600]">.DEV</span></span>
                             </div>
@@ -861,15 +918,15 @@
 
                             <div class="footer-socials font-sans">
                                 <h4 class="font-heading font-bold text-white text-lg mb-4 tracking-wide">Profiles</h4>
-                                <a href="https://github.com" target="_blank"
+                                <a href="https://github.com/arish-27/" target="_blank"
                                     class="flex items-center gap-2 text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors"><i
                                         class="devicon-github-original text-base"></i> GitHub ↗</a>
-                                <a href="https://linkedin.com" target="_blank"
+                                <a href="https://www.linkedin.com/in/arish-s-a31a5737a" target="_blank"
                                     class="flex items-center gap-2 text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors"><i
-                                        class="devicon-linkedin-plain text-base"></i> LinkedIn ↗</a>
-                                <a href="https://twitter.com" target="_blank"
+                                        class="devicon-linkedin-plain text-base text-blue-400"></i> LinkedIn ↗</a>
+                                <a href="https://leetcode.com/u/MWbc0YXkin/" target="_blank"
                                     class="flex items-center gap-2 text-gray-300 hover:text-[#9ae600] text-sm mb-2.5 transition-colors"><i
-                                        class="devicon-twitter-original text-base"></i> Twitter / X ↗</a>
+                                        class="devicon-cplusplus-plain text-base text-yellow-400"></i> LeetCode ↗</a>
                             </div>
                         </div>
                     </div>
