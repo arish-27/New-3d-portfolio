@@ -1,92 +1,95 @@
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
-const context = canvas.getContext("2d");
 
-const frameCount = 240;
-const currentFrame = index => (
-  `new_frames/frame_${(index + 1).toString().padStart(4, '0')}.jpg`
-);
+if (canvas) {
+  const context = canvas.getContext("2d");
 
-const images = [];
-let targetFrame = 0;
-let currentFrameIndex = 0;
-let isFirstRenderDone = false;
+  const frameCount = 240;
+  const currentFrame = index => (
+    `new_frames/frame_${(index + 1).toString().padStart(4, '0')}.jpg`
+  );
 
-// Preload all frames
-const preloadImages = () => {
-  for (let i = 0; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-    img.onload = () => {
-      if (i === 0 && !isFirstRenderDone) {
-        isFirstRenderDone = true;
-        renderImage(images[0]);
-      }
-    };
-    images.push(img);
+  const images = [];
+  let targetFrame = 0;
+  let currentFrameIndex = 0;
+  let isFirstRenderDone = false;
+
+  // Preload all frames
+  const preloadImages = () => {
+    for (let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = currentFrame(i);
+      img.onload = () => {
+        if (i === 0 && !isFirstRenderDone) {
+          isFirstRenderDone = true;
+          renderImage(images[0]);
+        }
+      };
+      images.push(img);
+    }
+  };
+
+  // Resize canvas only when window size changes
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const activeImage = images[Math.round(currentFrameIndex)] || images[0];
+    if (activeImage && activeImage.complete) {
+      renderImage(activeImage);
+    }
   }
-};
 
-// Resize canvas only when window size changes
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  const activeImage = images[Math.round(currentFrameIndex)] || images[0];
-  if (activeImage && activeImage.complete) {
-    renderImage(activeImage);
+  // Ultra-smooth draw routine (no canvas resizing inside render loop)
+  function renderImage(img) {
+    if (!img || !img.complete || img.width === 0) return;
+    
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
+    
+    // Cover scale
+    const scale = Math.max(canvasWidth / img.width, canvasHeight / img.height);
+    const drawWidth = img.width * scale;
+    const drawHeight = img.height * scale;
+    const x = (canvasWidth - drawWidth) / 2;
+    const y = (canvasHeight - drawHeight) / 2;
+
+    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.drawImage(img, x, y, drawWidth, drawHeight);
   }
-}
 
-// Ultra-smooth draw routine (no canvas resizing inside render loop)
-function renderImage(img) {
-  if (!img || !img.complete || img.width === 0) return;
-  
-  const canvasWidth = canvas.width;
-  const canvasHeight = canvas.height;
-  
-  // Cover scale
-  const scale = Math.max(canvasWidth / img.width, canvasHeight / img.height);
-  const drawWidth = img.width * scale;
-  const drawHeight = img.height * scale;
-  const x = (canvasWidth - drawWidth) / 2;
-  const y = (canvasHeight - drawHeight) / 2;
-
-  context.clearRect(0, 0, canvasWidth, canvasHeight);
-  context.drawImage(img, x, y, drawWidth, drawHeight);
-}
-
-// Calculate target frame on scroll
-function onScroll() {
-  const scrollTop = html.scrollTop || document.body.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.innerHeight;
-  
-  if (maxScrollTop <= 0) return;
-  
-  const scrollFraction = Math.max(0, Math.min(1, scrollTop / maxScrollTop));
-  targetFrame = scrollFraction * (frameCount - 1);
-}
-
-// Continuous requestAnimationFrame loop with Smooth Lerp (Linear Interpolation)
-function animationLoop() {
-  currentFrameIndex += (targetFrame - currentFrameIndex) * 0.18;
-  
-  const frameToDraw = Math.max(0, Math.min(frameCount - 1, Math.round(currentFrameIndex)));
-  const img = images[frameToDraw];
-  
-  if (img && img.complete) {
-    renderImage(img);
+  // Calculate target frame on scroll
+  function onScroll() {
+    const scrollTop = html.scrollTop || document.body.scrollTop;
+    const maxScrollTop = html.scrollHeight - window.innerHeight;
+    
+    if (maxScrollTop <= 0) return;
+    
+    const scrollFraction = Math.max(0, Math.min(1, scrollTop / maxScrollTop));
+    targetFrame = scrollFraction * (frameCount - 1);
   }
-  
+
+  // Continuous requestAnimationFrame loop with Smooth Lerp (Linear Interpolation)
+  function animationLoop() {
+    currentFrameIndex += (targetFrame - currentFrameIndex) * 0.18;
+    
+    const frameToDraw = Math.max(0, Math.min(frameCount - 1, Math.round(currentFrameIndex)));
+    const img = images[frameToDraw];
+    
+    if (img && img.complete) {
+      renderImage(img);
+    }
+    
+    requestAnimationFrame(animationLoop);
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Initial setup
+  resizeCanvas();
+  preloadImages();
   requestAnimationFrame(animationLoop);
 }
-
-window.addEventListener('resize', resizeCanvas);
-window.addEventListener('scroll', onScroll, { passive: true });
-
-// Initial setup
-resizeCanvas();
-preloadImages();
-requestAnimationFrame(animationLoop);
 
 /* ===================================================
    Custom Developer Cursor: </> with Click Blinking

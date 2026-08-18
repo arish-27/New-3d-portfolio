@@ -37,6 +37,14 @@
 
 <body class="text-white selection:bg-[#9ae600] selection:text-black min-h-screen flex flex-col justify-between font-sans">
     
+    <!-- Custom Developer Cursor: </> with Click Blinking -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div id="cursor-badge" class="cursor-badge">
+            &lt;/&gt;
+        </div>
+    </div>
+    <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
     <!-- Background Grid Overlay -->
     <div class="fixed inset-0 grid-pattern-bg pointer-events-none z-0"></div>
 
@@ -262,5 +270,11 @@
         </div>
     </footer>
 
+    <!-- GSAP & ScrollTrigger Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script for Cursor & Interactions -->
+    <script src="main.js"></script>
 </body>
 </html>
