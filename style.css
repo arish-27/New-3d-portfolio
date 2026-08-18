@@ -865,3 +865,195 @@ canvas {
     background: #34d399;
     box-shadow: 0 0 8px rgba(52, 211, 153, 0.8);
 }
+
+/* ===================================================
+   AI Tools & Platforms Section Styles
+   =================================================== */
+.ai-tools-section {
+    position: relative;
+    z-index: 10;
+}
+
+.ai-ambient-glow {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 1100px;
+    height: 480px;
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.09) 0%, rgba(168, 85, 247, 0.06) 45%, rgba(16, 185, 129, 0.04) 75%, transparent 100%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Category Filter Tabs */
+.ai-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.ai-filter-btn:hover {
+    color: #ffffff;
+    border-color: rgba(56, 189, 248, 0.5);
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-1px);
+}
+
+.ai-filter-btn.active {
+    color: #080a0e;
+    background: #38bdf8;
+    border-color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* AI Tool Card */
+.ai-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    will-change: transform;
+}
+
+.ai-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    opacity: 0.6;
+}
+
+.ai-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+.ai-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* AI Category & Engine Badge Pills */
+.ai-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 0.68rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.ai-badge-pill.emerald {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    color: #34d399;
+}
+
+.ai-badge-pill.amber {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: #fbbf24;
+}
+
+.ai-badge-pill.blue {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    color: #60a5fa;
+}
+
+.ai-badge-pill.purple {
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    color: #c084fc;
+}
+
+.ai-badge-pill.cyan {
+    background: rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    color: #22d3ee;
+}
+
+.ai-badge-pill.teal {
+    background: rgba(20, 184, 166, 0.15);
+    border: 1px solid rgba(20, 184, 166, 0.35);
+    color: #2dd4bf;
+}
+
+.ai-badge-pill.orange {
+    background: rgba(249, 115, 22, 0.15);
+    border: 1px solid rgba(249, 115, 22, 0.35);
+    color: #fb923c;
+}
+
+.ai-badge-pill.lime {
+    background: rgba(154, 230, 0, 0.15);
+    border: 1px solid rgba(154, 230, 0, 0.35);
+    color: #9ae600;
+}
+
+.ai-badge-pill.indigo {
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+    color: #818cf8;
+}
+
+.ai-badge-pill.pink {
+    background: rgba(236, 72, 153, 0.15);
+    border: 1px solid rgba(236, 72, 153, 0.35);
+    color: #f472b6;
+}
+
+.ai-badge-pill.violet {
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    color: #a78bfa;
+}
+
+.ai-badge-pill.fuchsia {
+    background: rgba(217, 70, 239, 0.15);
+    border: 1px solid rgba(217, 70, 239, 0.35);
+    color: #e879f9;
+}
+
+/* AI Tag */
+.ai-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.68rem;
+    font-family: 'Fira Code', monospace;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.ai-card:hover .ai-tag {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #e0f2fe;
+}

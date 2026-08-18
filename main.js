@@ -174,7 +174,7 @@ if (customCursor && cursorFollower && window.matchMedia("(pointer: fine)").match
   requestAnimationFrame(updateCursorLoop);
 
   // Interactive Hover Effects on Links, Buttons, Cards, Inputs
-  const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .creative-card, .creative-badge, .creative-icon-box, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
+  const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .creative-card, .creative-badge, .creative-icon-box, .ai-card, .ai-filter-btn, .ai-tag, .ai-icon-box, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
   
   document.addEventListener("mouseover", (e) => {
     if (e.target.closest(interactiveSelectors)) {
@@ -192,13 +192,13 @@ if (customCursor && cursorFollower && window.matchMedia("(pointer: fine)").match
 }
 
 /* ===================================================
-   GSAP & ScrollTrigger Animations: AdCreative Toolkit
+   GSAP & ScrollTrigger Animations & Category Filters
    =================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animate AdCreative Section Header
+    // 1. AdCreative Section Header & Cards Animation
     gsap.from(".creative-header-panel", {
       scrollTrigger: {
         trigger: "#creative-toolkit",
@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power3.out"
     });
 
-    // Animate 3 Creative Cards with Staggered Entrance
     gsap.from(".creative-card", {
       scrollTrigger: {
         trigger: ".creative-toolkit-section .grid",
@@ -226,23 +225,51 @@ document.addEventListener("DOMContentLoaded", () => {
       clearProps: "transform,opacity"
     });
 
-    // Subtle 3D Card Tilt Interaction on Desktop
+    // 2. AI Tools & Platforms Section Header Animation
+    gsap.from(".ai-header-panel", {
+      scrollTrigger: {
+        trigger: "#ai-tools",
+        start: "top 82%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.85,
+      ease: "power3.out"
+    });
+
+    // Animate AI Category Groups & Cards
+    gsap.from(".ai-category-group", {
+      scrollTrigger: {
+        trigger: "#ai-tools",
+        start: "top 78%",
+        toggleActions: "play none none none"
+      },
+      y: 45,
+      opacity: 0,
+      duration: 0.85,
+      stagger: 0.2,
+      ease: "power3.out",
+      clearProps: "transform,opacity"
+    });
+
+    // 3. Subtle 3D Card Tilt Interaction for Creative & AI Cards
     if (window.matchMedia("(pointer: fine)").matches) {
-      const creativeCards = document.querySelectorAll(".creative-card");
-      creativeCards.forEach(card => {
+      const tiltCards = document.querySelectorAll(".creative-card, .ai-card");
+      tiltCards.forEach(card => {
         card.addEventListener("mousemove", (e) => {
           const rect = card.getBoundingClientRect();
           const x = e.clientX - rect.left - rect.width / 2;
           const y = e.clientY - rect.top - rect.height / 2;
-          const rotateX = -(y / (rect.height / 2)) * 5;
-          const rotateY = (x / (rect.width / 2)) * 5;
+          const rotateX = -(y / (rect.height / 2)) * 4.5;
+          const rotateY = (x / (rect.width / 2)) * 4.5;
 
           gsap.to(card, {
             rotateX: rotateX,
             rotateY: rotateY,
             transformPerspective: 1000,
             ease: "power1.out",
-            duration: 0.3
+            duration: 0.25
           });
         });
 
@@ -251,11 +278,41 @@ document.addEventListener("DOMContentLoaded", () => {
             rotateX: 0,
             rotateY: 0,
             ease: "power2.out",
-            duration: 0.5
+            duration: 0.45
           });
         });
       });
     }
   }
+
+  // 4. Interactive Category Filtering for AI Tools
+  const filterButtons = document.querySelectorAll(".ai-filter-btn");
+  const categoryGroups = document.querySelectorAll(".ai-category-group");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filterValue = btn.getAttribute("data-filter");
+
+      categoryGroups.forEach(group => {
+        const groupCategory = group.getAttribute("data-group");
+        if (filterValue === "all" || filterValue === groupCategory) {
+          group.style.display = "block";
+          if (typeof gsap !== "undefined") {
+            gsap.fromTo(group, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
+          }
+        } else {
+          group.style.display = "none";
+        }
+      });
+
+      if (typeof ScrollTrigger !== "undefined") {
+        ScrollTrigger.refresh();
+      }
+    });
+  });
 });
+
 
