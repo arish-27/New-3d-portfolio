@@ -313,6 +313,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  window.addEventListener("load", () => {
+    if (typeof ScrollTrigger !== "undefined") {
+      ScrollTrigger.refresh();
+    }
+  });
 });
+
 
 
