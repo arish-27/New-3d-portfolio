@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Engineering &amp; AdCreative Toolkit | Arish S.</title>
+    <meta name="description" content="Dedicated suite showcasing Figma, Adobe Photoshop, and UI/UX Design engineering capabilities by Arish S.">
+
+    <!-- Fonts & Frameworks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Standalone Enterprise Theme: Obsidian Slate with Violet/Emerald Mesh */
+        body {
+            background-color: #06080d;
+            background-image: 
+                radial-gradient(at 15% 15%, rgba(168, 85, 247, 0.08) 0px, transparent 50%),
+                radial-gradient(at 85% 20%, rgba(52, 211, 153, 0.06) 0px, transparent 50%),
+                radial-gradient(at 50% 80%, rgba(56, 189, 248, 0.05) 0px, transparent 60%);
+            background-attachment: fixed;
+        }
+
+        .grid-pattern-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="text-white selection:bg-[#9ae600] selection:text-black min-h-screen flex flex-col justify-between font-sans">
+    
+    <!-- Background Grid Overlay -->
+    <div class="fixed inset-0 grid-pattern-bg pointer-events-none z-0"></div>
+
+    <!-- Top Enterprise Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-[#06080d]/85 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="logo font-heading text-xl font-extrabold tracking-wider flex items-center gap-2 group">
+                    <span class="text-[#9ae600] font-mono text-base">&lt;/&gt;</span>
+                    <span class="text-white group-hover:text-[#9ae600] transition-colors">ARISH<span class="text-[#9ae600]">.DEV</span></span>
+                </a>
+                <div class="hidden sm:flex items-center gap-2 text-xs font-mono text-gray-400 border-l border-white/10 pl-6">
+                    <span class="text-gray-400">Solutions</span>
+                    <span class="text-gray-400">/</span>
+                    <span class="text-purple-400 font-semibold">Creative Toolkit</span>
+                </div>
+            </div>
+
+            <nav class="flex items-center gap-4 text-sm font-mono">
+                <a href="index.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-[#9ae600] transition-all text-xs">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Main Portfolio</span>
+                </a>
+                <a href="ai-tools.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/20 transition-all text-xs">
+                    <span>AI Stack Page</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <main class="max-w-7xl mx-auto px-6 py-12 relative z-10 w-full flex-1">
+        
+        <!-- Breadcrumb & Status Pill -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+            <div class="flex items-center gap-2 text-xs font-mono text-gray-400">
+                <a href="index.html" class="hover:text-[#9ae600] transition-colors">Portfolio</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-white">Additional Specialization</span>
+                <span class="text-gray-400">/</span>
+                <span class="text-purple-400 font-semibold">AdCreative Toolkit</span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-mono">
+                <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                <span>ENTERPRISE DESIGN &amp; CREATIVE SUITE</span>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <div class="glass-panel p-8 sm:p-12 mb-12 border border-white/10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-3xl">
+                <div class="section-badge-pill mb-4 inline-flex border-purple-500/40">
+                    <span class="font-script text-purple-400 text-2xl -rotate-6 inline-block font-bold">Creative Suite —</span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-purple-300">Design Systems &amp; Visuals</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight mb-4">
+                    AdCreative <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent">Toolkit</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg font-sans leading-relaxed">
+                    A dedicated breakdown of visual design, user experience architecture, digital wireframing, and multimedia assets creation tools that complement my full stack engineering stack.
+                </p>
+            </div>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Tool 1: Figma -->
+            <div class="p-8 rounded-3xl bg-[rgba(12,15,22,0.85)] border border-white/12 hover:border-purple-400/60 transition-all duration-400 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <i class="devicon-figma-plain text-3xl"></i>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 font-bold">UI / PROTOTYPING</span>
+                    </div>
+                    <h2 class="text-2xl font-heading font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Figma</h2>
+                    <p class="text-xs font-mono text-purple-300/90 mb-4 font-semibold">
+                        UI design, wireframing, prototyping, and interface design
+                    </p>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Architecting atomic design systems, interactive multi-frame user journeys, scalable auto-layout components, and developer hand-off specs with pixel precision.
+                    </p>
+                </div>
+                <div class="pt-5 border-t border-white/10">
+                    <h4 class="text-xs font-mono text-gray-400 uppercase tracking-wider mb-3">Key Capabilities</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="creative-badge"><span class="badge-dot purple"></span> UI Design</span>
+                        <span class="creative-badge"><span class="badge-dot purple"></span> Wireframing</span>
+                        <span class="creative-badge"><span class="badge-dot purple"></span> Interactive Prototypes</span>
+                        <span class="creative-badge"><span class="badge-dot purple"></span> Interface Design</span>
+                        <span class="creative-badge"><span class="badge-dot purple"></span> Design Systems</span>
+                        <span class="creative-badge"><span class="badge-dot purple"></span> Auto-Layout Architecture</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 2: Adobe Photoshop -->
+            <div class="p-8 rounded-3xl bg-[rgba(12,15,22,0.85)] border border-white/12 hover:border-sky-400/60 transition-all duration-400 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+                            <i class="devicon-photoshop-plain text-3xl"></i>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-sky-500/15 border border-sky-500/30 text-sky-300 font-bold">GRAPHIC DESIGN</span>
+                    </div>
+                    <h2 class="text-2xl font-heading font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">Adobe Photoshop</h2>
+                    <p class="text-xs font-mono text-sky-300/90 mb-4 font-semibold">
+                        Image editing, graphic design, photo manipulation, and visual content creation
+                    </p>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Crafting high-fidelity promotional banners, product mockups, texture layers, raster optimizations, and polished brand visual assets.
+                    </p>
+                </div>
+                <div class="pt-5 border-t border-white/10">
+                    <h4 class="text-xs font-mono text-gray-400 uppercase tracking-wider mb-3">Key Capabilities</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="creative-badge"><span class="badge-dot sky"></span> Image Editing</span>
+                        <span class="creative-badge"><span class="badge-dot sky"></span> Graphic Design</span>
+                        <span class="creative-badge"><span class="badge-dot sky"></span> Photo Manipulation</span>
+                        <span class="creative-badge"><span class="badge-dot sky"></span> Visual Content Creation</span>
+                        <span class="creative-badge"><span class="badge-dot sky"></span> Banner Layouts</span>
+                        <span class="creative-badge"><span class="badge-dot sky"></span> Raster Asset Optimization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 3: UI/UX Design -->
+            <div class="p-8 rounded-3xl bg-[rgba(12,15,22,0.85)] border border-white/12 hover:border-emerald-400/60 transition-all duration-400 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-bold">USER EXPERIENCE</span>
+                    </div>
+                    <h2 class="text-2xl font-heading font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">UI/UX Design</h2>
+                    <p class="text-xs font-mono text-emerald-300/90 mb-4 font-semibold">
+                        User interface design, user experience principles, wireframes, prototypes, and creating user-friendly digital experiences
+                    </p>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Translating user needs into intuitive digital workflows, information architectures, accessible interfaces (WCAG standards), and seamless interactions.
+                    </p>
+                </div>
+                <div class="pt-5 border-t border-white/10">
+                    <h4 class="text-xs font-mono text-gray-400 uppercase tracking-wider mb-3">Key Capabilities</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="creative-badge"><span class="badge-dot emerald"></span> UI Design Principles</span>
+                        <span class="creative-badge"><span class="badge-dot emerald"></span> UX Principles</span>
+                        <span class="creative-badge"><span class="badge-dot emerald"></span> Wireframes &amp; Prototypes</span>
+                        <span class="creative-badge"><span class="badge-dot emerald"></span> User-Friendly Experiences</span>
+                        <span class="creative-badge"><span class="badge-dot emerald"></span> User Journey Mapping</span>
+                        <span class="creative-badge"><span class="badge-dot emerald"></span> Usability &amp; Accessibility</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Process Pipeline (IT Enterprise Layout) -->
+        <div class="glass-panel p-8 sm:p-10 border border-white/10 mb-16">
+            <h3 class="text-xl font-heading font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-purple-400 font-mono text-sm">&lt;01&gt;</span>
+                End-to-End Creative Engineering Workflow
+            </h3>
+            <p class="text-gray-400 text-xs font-mono mb-8">How visual design directly connects to full-stack code implementation</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <span class="text-xs font-mono text-purple-400 font-bold block mb-2">PHASE 01</span>
+                    <h4 class="text-base font-bold text-white mb-2">Discovery &amp; User Flow</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">Identifying user pain points, mapping user journeys, and structuring information architecture.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <span class="text-xs font-mono text-sky-400 font-bold block mb-2">PHASE 02</span>
+                    <h4 class="text-base font-bold text-white mb-2">Wireframing &amp; Assets</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">Drafting low-fi schemas, producing vector icon sets, and processing custom media assets in Photoshop.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <span class="text-xs font-mono text-emerald-400 font-bold block mb-2">PHASE 03</span>
+                    <h4 class="text-base font-bold text-white mb-2">Figma High-Fi Design</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">Creating tokens, responsive auto-layout components, and interactive prototypes for design review.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <span class="text-xs font-mono text-[#9ae600] font-bold block mb-2">PHASE 04</span>
+                    <h4 class="text-base font-bold text-white mb-2">Full-Stack Handoff</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">Translating Figma design systems into pixel-perfect React, Tailwind CSS, and frontend code.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Call to Action Footer Panel -->
+        <div class="p-8 rounded-3xl bg-gradient-to-r from-purple-950/40 via-black to-emerald-950/40 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div>
+                <h3 class="text-xl font-heading font-bold text-white">Looking for the core engineering stack?</h3>
+                <p class="text-xs text-gray-300 font-mono mt-1">Explore Java, Python, React, SQL, and live production applications.</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <a href="index.html" class="px-5 py-2.5 rounded-full bg-[#9ae600] text-black font-bold text-xs hover:bg-[#85c700] transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    <span>Back to Main Portfolio</span>
+                </a>
+                <a href="ai-tools.html" class="px-5 py-2.5 rounded-full bg-white/10 text-white font-bold text-xs hover:bg-white/20 transition-colors flex items-center gap-2">
+                    <span>Explore AI Tools</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="border-t border-white/10 bg-[#06080d]/90 py-8 relative z-10 text-center text-xs text-gray-400 font-mono">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Arish S. &bull; AdCreative &amp; Design Engineering</p>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-[#9ae600] transition-colors">Main Portfolio</a>
+                <a href="ai-tools.html" class="hover:text-cyan-400 transition-colors">AI Tools Suite</a>
+                <a href="index.html#contact" class="hover:text-[#9ae600] transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

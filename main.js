@@ -198,60 +198,80 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. AdCreative Section Header & Cards Animation
-    gsap.from(".creative-header-panel", {
-      scrollTrigger: {
-        trigger: "#creative-toolkit",
-        start: "top 82%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.85,
-      ease: "power3.out"
-    });
+    // 1. Specialized Portals Animation (on index.html)
+    if (document.querySelector("#specialized-portals")) {
+      gsap.from("#specialized-portals .grid > div", {
+        scrollTrigger: {
+          trigger: "#specialized-portals",
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.85,
+        stagger: 0.2,
+        ease: "power3.out",
+        clearProps: "transform,opacity"
+      });
+    }
 
-    gsap.from(".creative-card", {
-      scrollTrigger: {
-        trigger: ".creative-toolkit-section .grid",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.18,
-      ease: "power3.out",
-      clearProps: "transform,opacity"
-    });
+    // 2. AdCreative Section Animation (if present)
+    if (document.querySelector("#creative-toolkit")) {
+      gsap.from(".creative-header-panel", {
+        scrollTrigger: {
+          trigger: "#creative-toolkit",
+          start: "top 82%",
+          toggleActions: "play none none none"
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.85,
+        ease: "power3.out"
+      });
 
-    // 2. AI Tools & Platforms Section Header Animation
-    gsap.from(".ai-header-panel", {
-      scrollTrigger: {
-        trigger: "#ai-tools",
-        start: "top 82%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.85,
-      ease: "power3.out"
-    });
+      gsap.from(".creative-card", {
+        scrollTrigger: {
+          trigger: ".creative-toolkit-section .grid",
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.18,
+        ease: "power3.out",
+        clearProps: "transform,opacity"
+      });
+    }
 
-    // Animate AI Category Groups & Cards
-    gsap.from(".ai-category-group", {
-      scrollTrigger: {
-        trigger: "#ai-tools",
-        start: "top 78%",
-        toggleActions: "play none none none"
-      },
-      y: 45,
-      opacity: 0,
-      duration: 0.85,
-      stagger: 0.2,
-      ease: "power3.out",
-      clearProps: "transform,opacity"
-    });
+    // 3. AI Tools & Platforms Section Animation (if present)
+    if (document.querySelector("#ai-tools")) {
+      gsap.from(".ai-header-panel", {
+        scrollTrigger: {
+          trigger: "#ai-tools",
+          start: "top 82%",
+          toggleActions: "play none none none"
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.85,
+        ease: "power3.out"
+      });
+
+      gsap.from(".ai-category-group", {
+        scrollTrigger: {
+          trigger: "#ai-tools",
+          start: "top 78%",
+          toggleActions: "play none none none"
+        },
+        y: 45,
+        opacity: 0,
+        duration: 0.85,
+        stagger: 0.2,
+        ease: "power3.out",
+        clearProps: "transform,opacity"
+      });
+    }
 
     // 3. Subtle 3D Card Tilt Interaction for Creative & AI Cards
     if (window.matchMedia("(pointer: fine)").matches) {
