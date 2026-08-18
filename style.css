@@ -751,3 +751,117 @@ canvas {
         box-shadow: 0 0 35px rgba(154, 230, 0, 0);
     }
 }
+
+/* ===================================================
+   AdCreative Toolkit Section & Cards Styles
+   =================================================== */
+.creative-toolkit-section {
+    position: relative;
+    z-index: 10;
+}
+
+.creative-ambient-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1000px;
+    height: 380px;
+    background: radial-gradient(circle at 50% 50%, rgba(162, 89, 255, 0.08) 0%, rgba(49, 168, 255, 0.05) 45%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.creative-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    will-change: transform;
+}
+
+.creative-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0.6;
+}
+
+.figma-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(162, 89, 255, 0.65);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 35px rgba(162, 89, 255, 0.25);
+}
+
+.photoshop-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(49, 168, 255, 0.65);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 35px rgba(49, 168, 255, 0.25);
+}
+
+.uiux-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(52, 211, 153, 0.65);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 35px rgba(52, 211, 153, 0.25);
+}
+
+.creative-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    border-radius: 8px;
+    font-size: 0.73rem;
+    font-family: 'Fira Code', monospace;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.figma-card:hover .creative-badge {
+    background: rgba(162, 89, 255, 0.12);
+    border-color: rgba(162, 89, 255, 0.35);
+    color: #f3e8ff;
+}
+
+.photoshop-card:hover .creative-badge {
+    background: rgba(49, 168, 255, 0.12);
+    border-color: rgba(49, 168, 255, 0.35);
+    color: #e0f2fe;
+}
+
+.uiux-card:hover .creative-badge {
+    background: rgba(52, 211, 153, 0.12);
+    border-color: rgba(52, 211, 153, 0.35);
+    color: #ecfdf5;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.badge-dot.purple {
+    background: #c084fc;
+    box-shadow: 0 0 8px rgba(192, 132, 252, 0.8);
+}
+
+.badge-dot.sky {
+    background: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+}
+
+.badge-dot.emerald {
+    background: #34d399;
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.8);
+}

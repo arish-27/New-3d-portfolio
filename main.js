@@ -174,7 +174,7 @@ if (customCursor && cursorFollower && window.matchMedia("(pointer: fine)").match
   requestAnimationFrame(updateCursorLoop);
 
   // Interactive Hover Effects on Links, Buttons, Cards, Inputs
-  const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
+  const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .creative-card, .creative-badge, .creative-icon-box, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
   
   document.addEventListener("mouseover", (e) => {
     if (e.target.closest(interactiveSelectors)) {
@@ -190,3 +190,72 @@ if (customCursor && cursorFollower && window.matchMedia("(pointer: fine)").match
     }
   });
 }
+
+/* ===================================================
+   GSAP & ScrollTrigger Animations: AdCreative Toolkit
+   =================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate AdCreative Section Header
+    gsap.from(".creative-header-panel", {
+      scrollTrigger: {
+        trigger: "#creative-toolkit",
+        start: "top 82%",
+        toggleActions: "play none none none"
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.85,
+      ease: "power3.out"
+    });
+
+    // Animate 3 Creative Cards with Staggered Entrance
+    gsap.from(".creative-card", {
+      scrollTrigger: {
+        trigger: ".creative-toolkit-section .grid",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.18,
+      ease: "power3.out",
+      clearProps: "transform,opacity"
+    });
+
+    // Subtle 3D Card Tilt Interaction on Desktop
+    if (window.matchMedia("(pointer: fine)").matches) {
+      const creativeCards = document.querySelectorAll(".creative-card");
+      creativeCards.forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          const rotateX = -(y / (rect.height / 2)) * 5;
+          const rotateY = (x / (rect.width / 2)) * 5;
+
+          gsap.to(card, {
+            rotateX: rotateX,
+            rotateY: rotateY,
+            transformPerspective: 1000,
+            ease: "power1.out",
+            duration: 0.3
+          });
+        });
+
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, {
+            rotateX: 0,
+            rotateY: 0,
+            ease: "power2.out",
+            duration: 0.5
+          });
+        });
+      });
+    }
+  }
+});
+
