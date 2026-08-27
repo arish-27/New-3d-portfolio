@@ -738,310 +738,377 @@
                     </p>
                 </div>
 
-                <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="projects-grid grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
                     <!-- Project 1: Real-Time Network Telemetry Monitoring System -->
-                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between">
-                        <div>
-                            <div
-                                class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-64 transition-all">
-                                <div class="flex justify-between items-start">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/30 font-semibold">
-                                        Java • Spring Boot • InfluxDB • Grafana
-                                    </span>
-                                    <a href="https://github.com/arish-27/" target="_blank"
-                                        class="p-1.5 rounded-lg bg-white/5 hover:bg-[#9ae600] text-gray-400 hover:text-black transition-colors"
-                                        title="View Source">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="my-auto text-center font-mono">
-                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
-                                        <i class="devicon-java-plain text-orange-400"></i>
-                                        <i class="devicon-spring-plain text-green-500"></i>
-                                        <i class="devicon-grafana-plain text-orange-500"></i>
+                    <div class="project-card group glass-panel p-6 sm:p-7 flex flex-col justify-between rounded-3xl border border-white/10">
+                        <div class="flex flex-col">
+                            <!-- 1. Visual Preview Area / Mockup -->
+                            <div class="project-preview-wrapper relative overflow-hidden rounded-2xl bg-neutral-950 border border-white/10 mb-6">
+                                <!-- Mockup Top Window Bar -->
+                                <div class="flex items-center justify-between px-4 py-2.5 bg-neutral-900/90 border-b border-white/5 backdrop-blur-md">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
                                     </div>
-                                    <p class="text-base sm:text-lg text-white font-bold font-heading">Network Telemetry
-                                        Engine</p>
+                                    <div class="flex items-center gap-2 text-[11px] font-mono text-gray-400">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-[#9ae600] animate-pulse"></span>
+                                        <span class="text-gray-300">NetFlow Telemetry Engine</span>
+                                    </div>
+                                    <div class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-400 border border-white/5">
+                                        InfluxDB • Grafana
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                    <span class="inline-flex items-center gap-1.5 text-[#9ae600]">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                        </svg>
-                                        Low Latency
-                                    </span>
-                                    <span>•</span>
-                                    <span>Distributed Pipeline</span>
+                                <!-- Mockup Image Container -->
+                                <div class="project-image-container relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900">
+                                    <img src="assets/projects/telemetry-dashboard.jpg" 
+                                         alt="Real-Time Network Telemetry Monitoring System Dashboard Mockup" 
+                                         class="w-full h-full object-cover object-center transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+                                    <!-- Fallback Placeholder -->
+                                    <div class="fallback-preview hidden absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 flex flex-col justify-center items-center text-center">
+                                        <div class="flex items-center gap-3 text-4xl mb-2">
+                                            <i class="devicon-java-plain text-orange-400"></i>
+                                            <i class="devicon-spring-plain text-green-500"></i>
+                                            <i class="devicon-grafana-plain text-orange-500"></i>
+                                        </div>
+                                        <p class="text-sm font-mono text-white font-bold">Network Telemetry Engine</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
-                            <div class="project-info mt-6">
-                                <h3
-                                    class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+
+                            <!-- 2. Project Title -->
+                            <div class="project-info">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors leading-snug">
                                     Real-Time Network Telemetry Monitoring System
                                 </h3>
-                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Designed and built a distributed, Spring Boot-based telemetry pipeline
-                                            that collects and processes real-time metrics (CPU, memory, latency, packet
-                                            loss) across monitored nodes.</span>
+
+                                <!-- 3. Short Description -->
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2.5">
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Designed and built a distributed, Spring Boot-based telemetry pipeline collecting real-time CPU, memory, latency, and packet loss metrics across monitored nodes.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Implemented threshold-based alerting logic with efficient in-memory data
-                                            structures to detect anomalies with low latency at scale.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Implemented threshold-based alerting logic with efficient in-memory data structures to detect network anomalies with low latency at scale.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Modeled high-throughput time-series data in InfluxDB and built Grafana
-                                            dashboards for real-time visualization and performance analysis.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Modeled high-throughput time-series data in InfluxDB and built real-time Grafana dashboards for performance analysis.</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
-                            <span class="tag">Java</span>
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">InfluxDB</span>
-                            <span class="tag">Grafana</span>
-                            <span class="tag">Distributed Systems</span>
+
+                        <!-- 4. Tech Stack Tags & 5. Action Buttons -->
+                        <div class="pt-4 border-t border-white/10 mt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">Java</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">InfluxDB</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Distributed Systems</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-1">
+                                <a href="https://github.com/arish-27/" target="_blank"
+                                    class="project-btn-secondary w-full sm:w-auto"
+                                    title="View Source on GitHub">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                    </svg>
+                                    <span>View Source on GitHub</span>
+                                </a>
+                                <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-gray-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#9ae600]"></span>
+                                    <span>Production Architecture</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project 2: AI-Powered Resume Analyzer & Mock Interviewer -->
-                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between">
-                        <div>
-                            <div
-                                class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-64 transition-all">
-                                <div class="flex justify-between items-start">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-semibold">
-                                        React • Python • Flask • Gemini AI
-                                    </span>
-                                    <a href="https://github.com/arish-27/" target="_blank"
-                                        class="p-1.5 rounded-lg bg-white/5 hover:bg-[#9ae600] text-gray-400 hover:text-black transition-colors"
-                                        title="View Source">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="my-auto text-center font-mono">
-                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
-                                        <i class="devicon-react-original text-cyan-400"></i>
-                                        <i class="devicon-python-plain text-yellow-400"></i>
-                                        <i class="devicon-flask-original text-white"></i>
+                    <div class="project-card group glass-panel p-6 sm:p-7 flex flex-col justify-between rounded-3xl border border-white/10">
+                        <div class="flex flex-col">
+                            <!-- 1. Visual Preview Area / Mockup -->
+                            <div class="project-preview-wrapper relative overflow-hidden rounded-2xl bg-neutral-950 border border-white/10 mb-6">
+                                <!-- Mockup Top Window Bar -->
+                                <div class="flex items-center justify-between px-4 py-2.5 bg-neutral-900/90 border-b border-white/5 backdrop-blur-md">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
                                     </div>
-                                    <p class="text-base sm:text-lg text-white font-bold font-heading">AI Resume &amp;
-                                        Voice Mock System</p>
+                                    <div class="flex items-center gap-2 text-[11px] font-mono text-gray-400">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                                        <span class="text-gray-300">ResuMate AI Platform</span>
+                                    </div>
+                                    <div class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                        Gemini AI • 94% ATS
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                    <span class="inline-flex items-center gap-1.5 text-cyan-400">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                        </svg>
-                                        Gemini AI Powered
-                                    </span>
-                                    <span>•</span>
-                                    <span>Real-Time Voice Scoring</span>
+                                <!-- Mockup Image Container -->
+                                <div class="project-image-container relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900">
+                                    <img src="assets/projects/resume-analyzer.jpg" 
+                                         alt="AI-Powered Resume Analyzer and Mock Interviewer UI Mockup" 
+                                         class="w-full h-full object-cover object-center transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+                                    <!-- Fallback Placeholder -->
+                                    <div class="fallback-preview hidden absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 flex flex-col justify-center items-center text-center">
+                                        <div class="flex items-center gap-3 text-4xl mb-2">
+                                            <i class="devicon-react-original text-cyan-400"></i>
+                                            <i class="devicon-python-plain text-yellow-400"></i>
+                                            <i class="devicon-flask-original text-white"></i>
+                                        </div>
+                                        <p class="text-sm font-mono text-white font-bold">AI Resume & Voice Mock System</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
-                            <div class="project-info mt-6">
-                                <h3
-                                    class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+
+                            <!-- 2. Project Title -->
+                            <div class="project-info">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors leading-snug">
                                     AI-Powered Resume Analyzer &amp; Mock Interviewer
                                 </h3>
-                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Architected a full-stack system (React frontend, Python/Flask REST APIs)
-                                            that parses resumes, extracts structured skill data, and generates
-                                            personalized interview questions.</span>
+
+                                <!-- 3. Short Description -->
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2.5">
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Architected a full-stack system (React frontend, Python/Flask REST APIs) parsing resumes, extracting structured skill data, and generating personalized interview questions.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Built a voice-based mock interview module integrating Gemini AI to
-                                            evaluate responses and return real-time scoring and feedback.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Built a voice-based mock interview module integrating Gemini AI to evaluate spoken responses with real-time scoring and feedback.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Designed clean API contracts between frontend and backend services to keep
-                                            the system modular and scalable.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Designed clean API contracts and schema validation between frontend and backend services for modular scalability.</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
-                            <span class="tag">React</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">Gemini AI</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">REST APIs</span>
+
+                        <!-- 4. Tech Stack Tags & 5. Action Buttons -->
+                        <div class="pt-4 border-t border-white/10 mt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">React</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">Gemini AI</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">REST APIs</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-1">
+                                <a href="https://github.com/arish-27/" target="_blank"
+                                    class="project-btn-secondary w-full sm:w-auto"
+                                    title="View Source on GitHub">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                    </svg>
+                                    <span>View Source on GitHub</span>
+                                </a>
+                                <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                                    <span>AI Voice & Scoring</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project 3: Driver Drowsiness Detection System -->
-                    <div class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between">
-                        <div>
-                            <div
-                                class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/10 p-6 flex flex-col justify-between h-64 transition-all">
-                                <div class="flex justify-between items-start">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs font-mono bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 font-semibold">
-                                        Java • OpenCV • Computer Vision
-                                    </span>
-                                    <a href="https://github.com/arish-27/" target="_blank"
-                                        class="p-1.5 rounded-lg bg-white/5 hover:bg-[#9ae600] text-gray-400 hover:text-black transition-colors"
-                                        title="View Source">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="my-auto text-center font-mono">
-                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
-                                        <i class="devicon-java-plain text-orange-400"></i>
-                                        <i class="devicon-opencv-plain text-blue-400"></i>
+                    <div class="project-card group glass-panel p-6 sm:p-7 flex flex-col justify-between rounded-3xl border border-white/10">
+                        <div class="flex flex-col">
+                            <!-- 1. Visual Preview Area / Mockup -->
+                            <div class="project-preview-wrapper relative overflow-hidden rounded-2xl bg-neutral-950 border border-white/10 mb-6">
+                                <!-- Mockup Top Window Bar -->
+                                <div class="flex items-center justify-between px-4 py-2.5 bg-neutral-900/90 border-b border-white/5 backdrop-blur-md">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
                                     </div>
-                                    <p class="text-base sm:text-lg text-white font-bold font-heading">Computer Vision
-                                        Safety System</p>
+                                    <div class="flex items-center gap-2 text-[11px] font-mono text-gray-400">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse"></span>
+                                        <span class="text-gray-300">Driver Monitor v2.1</span>
+                                    </div>
+                                    <div class="text-[10px] font-mono px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
+                                        64.2 FPS • EAR 88%
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                    <span class="inline-flex items-center gap-1.5 text-yellow-400">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                        </svg>
-                                        Real-Time Inference
-                                    </span>
-                                    <span>•</span>
-                                    <span>Facial Landmark Tracking</span>
+                                <!-- Mockup Image Container -->
+                                <div class="project-image-container relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900">
+                                    <img src="assets/projects/drowsiness-detection.jpg" 
+                                         alt="Driver Drowsiness Detection System Computer Vision Mockup" 
+                                         class="w-full h-full object-cover object-center transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+                                    <!-- Fallback Placeholder -->
+                                    <div class="fallback-preview hidden absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 flex flex-col justify-center items-center text-center">
+                                        <div class="flex items-center gap-3 text-4xl mb-2">
+                                            <i class="devicon-java-plain text-orange-400"></i>
+                                            <i class="devicon-opencv-plain text-blue-400"></i>
+                                        </div>
+                                        <p class="text-sm font-mono text-white font-bold">Computer Vision Safety System</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
-                            <div class="project-info mt-6">
-                                <h3
-                                    class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
+
+                            <!-- 2. Project Title -->
+                            <div class="project-info">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors leading-snug">
                                     Driver Drowsiness Detection System
                                 </h3>
-                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Built a real-time computer vision system using face/eye-tracking
-                                            algorithms to detect prolonged eye closure and trigger alerts.</span>
+
+                                <!-- 3. Short Description -->
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2.5">
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Built a real-time computer vision system using face and eye-tracking algorithms to detect prolonged eye closure and trigger instant alerts.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Optimized detection logic for low-latency inference suitable for
-                                            continuous, real-time operation.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Optimized detection logic and facial landmark inference for ultra-low latency execution suitable for continuous, real-time edge operation.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Implemented alert audio buzzer and visual triggers to ensure driver
-                                            alertness and prevent accidents.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Integrated multi-tier alert audio buzzer and visual triggers to ensure driver alertness and prevent fatigue-induced accidents.</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
-                            <span class="tag">Java</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Eye Tracking</span>
-                            <span class="tag">Low-Latency AI</span>
+
+                        <!-- 4. Tech Stack Tags & 5. Action Buttons -->
+                        <div class="pt-4 border-t border-white/10 mt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">Java</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Eye Tracking</span>
+                                <span class="tag">Low-Latency AI</span>
+                            </div>
+                            <div class="flex items-center justify-between pt-1">
+                                <a href="https://github.com/arish-27/" target="_blank"
+                                    class="project-btn-secondary w-full sm:w-auto"
+                                    title="View Source on GitHub">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                    </svg>
+                                    <span>View Source on GitHub</span>
+                                </a>
+                                <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-yellow-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                                    <span>CV Landmark Engine</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Project 4: Interactive 3D Cinematic Developer Portfolio -->
-                    <div
-                        class="project-card group glass-panel p-6 sm:p-8 flex flex-col justify-between border-[#9ae600]/40">
-                        <div>
-                            <div
-                                class="project-image-placeholder relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-[#9ae600]/30 p-6 flex flex-col justify-between h-64 transition-all">
-                                <div class="flex justify-between items-start">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs font-mono bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/40 font-semibold">
-                                        Live Project • 3D Canvas • ES2026
-                                    </span>
-                                    <a href="https://shorturl.at/Hha4p" target="_blank"
-                                        class="p-1.5 rounded-lg bg-[#9ae600]/20 hover:bg-[#9ae600] text-[#9ae600] hover:text-black transition-colors"
-                                        title="Live Preview">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div class="my-auto text-center font-mono">
-                                    <div class="flex items-center justify-center gap-3 text-4xl mb-2">
-                                        <i class="devicon-javascript-plain text-yellow-400"></i>
-                                        <i class="devicon-html5-plain text-orange-500"></i>
-                                        <i class="devicon-tailwindcss-plain text-cyan-300"></i>
+                    <div class="project-card group glass-panel p-6 sm:p-7 flex flex-col justify-between rounded-3xl border border-[#9ae600]/40">
+                        <div class="flex flex-col">
+                            <!-- 1. Visual Preview Area / Mockup -->
+                            <div class="project-preview-wrapper relative overflow-hidden rounded-2xl bg-neutral-950 border border-[#9ae600]/40 mb-6">
+                                <!-- Mockup Top Window Bar -->
+                                <div class="flex items-center justify-between px-4 py-2.5 bg-neutral-900/90 border-b border-white/5 backdrop-blur-md">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
                                     </div>
-                                    <p class="text-base sm:text-lg text-white font-bold font-heading">3D Scroll
-                                        Animation &amp; UI Engine</p>
-                                </div>
-                                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
-                                    <span class="inline-flex items-center gap-1.5 text-[#9ae600]">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                        </svg>
+                                    <div class="flex items-center gap-2 text-[11px] font-mono text-gray-400">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-[#9ae600] animate-pulse"></span>
+                                        <span class="text-white font-semibold">ARISH.DEV 3D Experience</span>
+                                    </div>
+                                    <div class="text-[10px] font-mono px-2 py-0.5 rounded bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/40 font-bold">
                                         60 FPS Canvas
-                                    </span>
-                                    <span>•</span>
-                                    <a href="https://shorturl.at/Hha4p" target="_blank"
-                                        class="inline-flex items-center gap-1 text-[#9ae600] hover:underline font-bold">
-                                        <span>shorturl.at/Hha4p</span>
-                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                                    </a>
+                                    </div>
+                                </div>
+                                <!-- Mockup Image Container -->
+                                <div class="project-image-container relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-neutral-900">
+                                    <img src="assets/projects/cinematic-portfolio.jpg" 
+                                         alt="Interactive 3D Cinematic Developer Portfolio UI Mockup" 
+                                         class="w-full h-full object-cover object-center transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+                                    <!-- Fallback Placeholder -->
+                                    <div class="fallback-preview hidden absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 p-6 flex flex-col justify-center items-center text-center">
+                                        <div class="flex items-center gap-3 text-4xl mb-2">
+                                            <i class="devicon-javascript-plain text-yellow-400"></i>
+                                            <i class="devicon-html5-plain text-orange-500"></i>
+                                            <i class="devicon-tailwindcss-plain text-cyan-300"></i>
+                                        </div>
+                                        <p class="text-sm font-mono text-white font-bold">3D Scroll Animation & UI Engine</p>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
-                            <div class="project-info mt-6">
-                                <div class="flex items-center justify-between">
-                                    <h3
-                                        class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors">
-                                        Interactive 3D Cinematic Portfolio
-                                    </h3>
-                                </div>
-                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Engineered a 240-frame dynamic scroll-driven 3D background animation with
-                                            hardware-accelerated HTML5 canvas rendering and real-time frame
-                                            interpolation.</span>
+
+                            <!-- 2. Project Title -->
+                            <div class="project-info">
+                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors leading-snug">
+                                    Interactive 3D Cinematic Portfolio
+                                </h3>
+
+                                <!-- 3. Short Description -->
+                                <ul class="text-gray-300 text-xs sm:text-sm my-4 leading-relaxed font-sans space-y-2.5">
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Engineered a 240-frame dynamic scroll-driven 3D background animation with hardware-accelerated HTML5 canvas rendering and real-time frame interpolation.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Built custom developer cursor &lt;/&gt; with smooth mouse tracking,
-                                            blinking click pulses, and multi-directional ambient drifting code
-                                            stream.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Built custom developer cursor &lt;/&gt; with smooth mouse tracking, blinking click pulses, and multi-directional ambient drifting code streams.</span>
                                     </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                                        <span>Deployed production-grade responsive architecture with 60fps scrolling and
-                                            dark glassmorphic aesthetics.</span>
+                                    <li class="flex items-start gap-2.5">
+                                        <svg class="w-4 h-4 text-[#9ae600] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Deployed production-grade responsive architecture with 60fps scrolling and dark glassmorphic aesthetics.</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div
-                            class="flex items-center justify-between flex-wrap gap-2 pt-2 border-t border-white/10 mt-4">
+
+                        <!-- 4. Tech Stack Tags & 5. Action Buttons -->
+                        <div class="pt-4 border-t border-white/10 mt-2 flex flex-col gap-4">
                             <div class="flex flex-wrap gap-2">
                                 <span class="tag">JavaScript (ES2026)</span>
                                 <span class="tag">HTML5 Canvas</span>
                                 <span class="tag">Tailwind CSS</span>
                                 <span class="tag">3D Rendering</span>
                             </div>
-                            <a href="https://shorturl.at/Hha4p" target="_blank"
-                                class="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#9ae600] hover:underline">
-                                <span>Live Link</span>
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                            </a>
+                            <div class="flex items-center justify-between flex-wrap gap-3 pt-1">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <a href="https://shorturl.at/Hha4p" target="_blank"
+                                        class="project-btn-primary"
+                                        title="Live Demo">
+                                        <span>Live Demo</span>
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                    </a>
+                                    <a href="https://github.com/arish-27/" target="_blank"
+                                        class="project-btn-secondary"
+                                        title="View Source on GitHub">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                                        </svg>
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
+                                <span class="text-xs font-mono text-[#9ae600] font-bold">
+                                    shorturl.at/Hha4p
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>     </a>
                         </div>
                     </div>
                 </div>
