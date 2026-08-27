@@ -1,3 +1,13 @@
+// Force browser to disable automatic scroll restoration so it always starts at the top on refresh
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
 
